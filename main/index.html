@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shoe Store</title>
   <link rel="stylesheet" href="/main/output.css">
 </head>
+
+<style>
+  /* inline css for navbar color */
+  .bg-navbar {
+    background-color: #920808;
+    
+  }
+
+  .nav-link {
+    color: #FFFFFF;
+    
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #131b27;
+  
+  }
+</style>
+
 <body>
-    <!-- Navbar -->
-    <nav class="bg-white shadow-lg">
-      <div class="container mx-auto px-4">
-          <div class="flex justify-between items-center py-4">
-              <a class="text-lg font-bold text-gray-800" href="#">Nike Store</a>
-              <div>
-                  <a class="text-gray-800 mr-4 hover:text-gray-600" href="#">Home</a>
-                  <a class="text-gray-800 mr-4 hover:text-gray-600" href="#">Shop</a>
-                  <a class="text-gray-800 mr-4 hover:text-gray-600" href="#">About</a>
-                  <a class="text-gray-800 hover:text-gray-600" href="#">Contact</a>
-              </div>
-          </div>
-      </div>
-  </nav>
+  <!-- Navbar -->
+  <nav class="bg-navbar shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a class="text-lg font-bold text-gray-800" href="#">Nike Store</a>
+                <div>
+                    <a class="nav-link mr-4 hover:text-gray-600" href="#">Home</a>
+                    <a class="nav-link mr-4 hover:text-gray-600" href="#">Shop</a>
+                    <a class="nav-link mr-4 hover:text-gray-600" href="#">About</a>
+                    <a class="nav-link hover:text-gray-600" href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 </body>
+
 </html>
