@@ -1,12 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    './pages/**/*.{html,js}',
+    './components/**/*.{html,js}',
+  ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'casita': "url('/img/bg-image.png')",
-    },
+    extend: {},
   },
   plugins: [],
-}
 }
