@@ -11,37 +11,46 @@
 <style>
   /* inline css for navbar color */
   .bg-navbar {
-    background-color: #920808;
-    
-  }
+    background: linear-gradient(135deg, #FF6B6B, #7868E6);
 
+  }
   .nav-link {
     color: #FFFFFF;
-    
+
     transition: color 0.3s ease-in-out;
   }
 
   .nav-link:hover {
     color: #131b27;
-  
+
   }
 </style>
 
 <body>
   <!-- Navbar -->
   <nav class="bg-navbar shadow-lg">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <a class="text-lg font-bold text-gray-800" href="#">Nike Store</a>
-                <div>
-                    <a class="nav-link mr-4 hover:text-gray-600" href="#">Home</a>
-                    <a class="nav-link mr-4 hover:text-gray-600" href="#">Shop</a>
-                    <a class="nav-link mr-4 hover:text-gray-600" href="#">About</a>
-                    <a class="nav-link hover:text-gray-600" href="#">Contact</a>
-                </div>
-            </div>
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <a class="text-lg font-bold text-gray-800" href="#">Nike Store</a>
+        <div>
+          <a class="nav-link mr-4 hover:text-gray-600" href="#">Home</a>
+          <a class="nav-link mr-4 hover:text-gray-600" href="#">Shop</a>
+          <a class="nav-link mr-4 hover:text-gray-600" href="#">About</a>
+          <a class="nav-link hover:text-gray-600" href="#">Contact</a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Welcome element -->
+
+  <div class="py-20 bg-gray-800 text-center text-white">
+    <h1 class="text-4xl font-bold mb-2">Welcome to Nike</h1>
+    <p class="text-lg">Discover our amazing shoes products!</p>
+    <button
+      class="bg-white text-gray-800 font-bold mt-6 py-2 px-6 rounded-full uppercase tracking-wide hover:bg-gray-100">Shop
+      Now</button>
+  </div>
 </body>
 
 </html>
