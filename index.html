@@ -6,9 +6,54 @@
         <link href="src/output.css" rel="stylesheet" >
         <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
     </head>
-    <body>
-        <div class="bg-yellow-100">
-            Hello World
-        </div>
+    <body class="bg-gray-100">
+        <!-- Navbar -->
+        <nav class="bg-gray-800 text-white py-4 " >
+            <div class="container mx-auto flex justify-between items-center px-1">
+                <a href="#" class="text-xl hover:text-pink-600 font-bold">Logo</a>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-pink-600 font-bold" >HOME</a></li>
+                    <li><a href="#" class="hover:text-pink-600 font-bold">ABOUT</a></li>
+                    <li><a href="#" class="hover:text-pink-600 font-bold">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <header class="bg-pink-300 text-white py-24 px-4">
+            <div class="container mx-auto text-center ml-4 mr-8">
+                <h1 class="text-4xl font-bold mb-2">UNLEASH YOUR MODERN STYLE</h1>
+                <p class="text-lg mb-4 text-black">Embrace your current flair and elevate your style with our carefully picked collection. Discover the hottest trends, timeless classics, and everything in between to let you express yourself uniquely. From sleek designs to bold statements, we're here to help you stand out and leave a lasting impression. Explore our range and redefine what modern style means for you.</p>
+                <a href="#" class="bg-white text-blue-500 px-6 py-3 rounded-full inline-block hover:bg-blue-400 hover:text-white">Get Started</a>
+            </div>
+        </header>
+        
+        <!-- Features Section -->
+        <section class="py-16 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-2xl font-bold mb-8 text-center">Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Feature 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Feature 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Feature 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer Section -->
+        <footer class="bg-gray-800 text-white py-8 hover:text-pink-600 font-bold">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </footer>
     </body>
 </html>
