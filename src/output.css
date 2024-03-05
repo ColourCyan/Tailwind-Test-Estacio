@@ -544,7 +544,19 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.bg-yellow-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
+.bg-\[url\(\'\/img\/bg-img\.png\'\)\] {
+  background-image: url('/img/bg-img.png');
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.underline {
+  text-decoration-line: underline;
 }
