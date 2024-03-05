@@ -1,0 +1,8 @@
+@font-face {
+    font-family: NanumGothicCoding-Regular;
+    src: url(fonts/NanumGothicCoding-Regular.ttf);
+}
+
+.font-style-NanumGothicCoding-Regular{
+    font-family: NanumGothicCoding-Regular;
+}
