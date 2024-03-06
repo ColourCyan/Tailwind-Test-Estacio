@@ -6,3 +6,30 @@
 .font-style-NanumGothicCoding-Regular{
     font-family: NanumGothicCoding-Regular;
 }
+
+@font-face {
+    font-family: Komorebi;
+    src: url(fonts/Komorebi-PersonalUse.otf);
+}
+
+.font-style-komorebi{
+    font-family: Komorebi;
+}
+
+@font-face {
+    font-family: League-Gothic;
+    src: url(fonts/LeagueGothic-Regular-VariableFont_wdth.ttf);
+}
+
+.font-style-league-gothic {
+    font-family: League-Gothic;
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+.font-style-montserrat-regular {
+    font-family: Montserrat-Regular;
+}
