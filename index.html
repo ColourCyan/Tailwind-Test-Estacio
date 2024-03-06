@@ -1,14 +1,48 @@
 <!DOCTYPE html>
-<html class="home" lang="en">
+<html class="home font-thin" lang="en">
     <head>
         <title> Landing Page </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="src/output.css" rel="stylesheet" >
+        <link rel="stylesheet" href="style.css">
         <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-        <div class="bg-yellow-100">
-            Hello World
+        <div class="container min-h-screen bg-[url('images/bgcolor.png')] bg-center bg-cover relative">
+            <nav class="flex items-center">
+                <ul class="flex-1 text-center py-5">
+                    <li class="list-none inline-block px-10"><a href="#" class="no-underline text-white px-10">Home</a></li>
+                    <li class="list-none inline-block px-10"><a href="#" class="no-underline text-white px-10">Order (Custom)</a></li>
+                    <li class="list-none inline-block px-10"><a a href="#" class="no-underline text-white px-10">Order (Pre-made)</a></li>
+                </ul>
+            </nav>
+            <div class="text-white leading-normal">
+                <h1 class="text-6xl px-16 py-16 text-center font-semibold">CUSTOM-MADE<br>PLUSHIES</h1>
+                <!-- <div class="mt-10">
+                    <a href="#" class="bg-neutral-300 px-3 py-5 hover:bg-transparent hover:border-neutral-300 hover:text-white duration-300 hover:border border border-transparent font-medium inline-block mr-4 rounded-3xl items-center">Order Now! <span class="text-lg inline-block rotate-90">&#10148</span></a>
+                </div> -->
+                <ul class="px-20 py-20 flex justify-center">
+                    <li class="inline-block list-none px-10 max-w-72"><img src="images/carousel-1.png"></li>
+                    <li class="inline-block list-none px-10 max-w-72"><img src="images/carousel-2.png"></li>
+                    <li class="inline-block list-none px-10 max-w-72"><img src="images/carousel-3.png"></li>
+                </ul>
+                
+                <p class="text-2xl text-center px-5 py-5"> We sell delightful plushies that turn cuddles into moments of joy.<br>Explore our charming collection and order your new cuddly friend today!</p>
+            </div>
+            <div class="wrapper">
+                <img src="images/mimikyu-transparent.png" class="bottom-0 left-auto max-w-80">
+                <p class="text-white leading-normal pb-36">Meet Mimikyu, our enchanting plushie that embodies mystery and charm. With its whimsical design, it's not just a toy but a companion that adds a touch of magic to your world. Adopt Mimikyu today and embrace the allure of the unknown.</p>
+            </div>
+            <div class="wrapper">
+                <img src="images/flareon.png" class="bottom-0 left-auto max-w-80">
+                <p class="text-white leading-normal pb-36">Introducing Flareon, the fiery and lovable plushie that radiates warmth and companionship. With its vibrant orange fur and friendly demeanor, Flareon is more than a stuffed animal – it's a source of comfort and joy. Bring home the flame of friendship with our Flareon plushie.</p>
+            </div>
+            <div class="wrapper">
+                <img src="images/furrets.png" class="bottom-0 left-auto max-w-80">
+                <p class="text-white leading-normal pb-36">Meet Furret, the embodiment of playfulness and charm. This delightful plushie is not just long in stature but also in affection. With its endearing design, Furret is a cuddly companion that adds a dash of whimsy to your day. Embrace the joy of softness with our Furret plushie.</p>
+        <div>
+            
         </div>
     </body>
 </html>
