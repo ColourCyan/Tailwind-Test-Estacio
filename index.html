@@ -6,9 +6,15 @@
     <link href="src/output.css" rel="stylesheet">
     <link href="src/fonts.css" rel="stylesheet">
     <link href="src/input.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="aos.js"></script>
     <title>Document</title>
 </head>
 <body class="bg">
+    <script>
+        AOS.init();
+      </script>
     <!-- ENTRY POINT -->
     <div class="relative h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('img/entry-point-bg.png');">
         <div>
@@ -32,7 +38,7 @@
     </div>
 
     <!-- Button -->
-    <div class="flex justify-center items-center pt-5 pb-5">
+    <div class="flex justify-center items-center pt-5 pb-5"  data-aos="zoom-in">
         <a href="https://www.airbnb.com/rooms/31050973?source_impression_id=p3_1709598590_i4C6OXVfPsKPrelK&modal=PHOTO_TOUR_SCROLLABLE">
             <button class="p-4 bg-transparent hover:bg-blue-950 text-black font-semibold hover:text-white py-2 px-4 border border-blue-900 hover:border-transparent rounded font-style-montserrat-regular"> BOOK NOW </button>
         </a>
@@ -40,7 +46,7 @@
 
     <!-- 2nd Section -->
 
-        <div class="inline-flex "> 
+        <div class="inline-flex " data-aos="fade-up"> 
             <img class="img-section-2-1" src="/svg/section-2-svg/1.svg"> 
             <h1 class="pt-4 font-style-league-gothic text-9xl text-left h1-section-2-1" > A designed space of your own to retreat from the hustle and bustle of the city. </h1>
             <ul class="icons-section-1">
@@ -51,7 +57,7 @@
             </ul>
         </div>
 
-        <div class="inline-flex pt-10"> 
+        <div class="inline-flex pt-10" data-aos="fade-up"> 
             <ul class="icons-section-1-2">
                 <li> <a href="https://www.airbnb.com/users/show/193581665"><img class="rounded-3xl" src="img/icons/1.png"></a> </li>
                 <li> <a href="https://www.facebook.com/casita.angela"><img class="pt-4" src="img/icons/2.png"></a> </li>
