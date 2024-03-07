@@ -4,6 +4,7 @@
         <title> K Boards </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="src/output.css" rel="stylesheet" >
+        <link rel="icon" href="img/kboard-icon.png" type="image/x-icon">
         <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
     </head>
     <body class="bg-purple-400">
@@ -13,38 +14,48 @@
         <div class="font-normal font-Poppins text-white">
             <!--nav bar-->
             <div>
-                
-                <nav class="flex flex-col md:flex-row md:justify-around">
-                    <h1 class="font-extrabold text-2xl font-Poppins p-3 md:justify-start">KBoards</h1>
-                    <!-- <ul>
-                        <div>
-                            <li>Home</li>
+                <nav class="">
+                    <div class="flex items-center justify-between">
+                    <img src="/img/KBoardsv3-Logo.png" alt="logo" class="px-4 w-30 h-20 sm:max-w-full object-contain cursor-pointer">
+                    <!--nav bar between logo and burger menu(Hidden in medium to large)-->
+                    <div class="hidden md:block">
+                        <div class="flex flex-row justify-around">
+                            <div class="py-3 px-2 pt-5 text-center border-white md:border-b-2 md:border-l-0">
+                                <a href="#">Home</a>  
+                            </div>
+                            <div class="py-3 px-2 pt-5 text-center">
+                                <a href="#">In-Stock</a>
+                            </div>
+                            <div class="py-3 px-2 pt-5 text-center">
+                                <a href="#">Group Buy</a>
+                            </div>
+                            <div class="py-3 px-2 pt-5 text-center">
+                            <a href="#">Discord</a> 
+                            </div>
                         </div>
-                        <div>
-                            <li>In-Stock</li>
-                        </div>
-                        <div>
-                            <li>Group Buy</li>
-                        </div>
-                        <div>
-                            <li>Discord</li>
-                        </div>
-                        
-
-                    </ul> -->
-                    <div class="py-3 px-2 pt-5 text-center">
-                        <a href="#">Home</a>  
-                    </div>
-                    <div class="py-3 px-2 pt-5 text-center">
-                        <a href="#">In-Stock</a>
-                    </div>
-                    <div class="py-3 px-2 pt-5 text-center">
-                        <a href="#">Group Buy</a>
-                    </div>
-                    <div class="py-3 px-2 pt-5 text-center">
-                       <a href="#">Discord</a> 
                     </div>
 
+                        <div class="px-4 cursor-pointer md:hidden" id="burger">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                            </svg>
+                        </div>
+                    </div>  
+                    <!--nav bar for the burger-->
+                    <div class="hidden md:hidden" id="menu">
+                        <div class="py-3 px-2 pt-7 text-center border-l-4 border-white md:border-b-2 md:border-l-0">
+                            <a href="#">Home</a>  
+                        </div>
+                        <div class="py-3 px-2 pt-7 text-center">
+                            <a href="#">In-Stock</a>
+                        </div>
+                        <div class="py-3 px-2 pt-7 text-center">
+                            <a href="#">Group Buy</a>
+                        </div>
+                        <div class="py-3 px-2 pt-7 text-center">
+                        <a href="#">Discord</a> 
+                        </div>
+                    </div>
                     
                 </nav>
             </div>
@@ -57,98 +68,292 @@
 
                 <div class="bg-purple-500 text-2xl">
                     <h3 class="font-semibold text-center">Group Buys</h3>
-                    <!-- md:bottom-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 -->
+                    <!-- <span class="uppercase font-normal text-xl left-1/2 -translate-x-1/2 translate-y-1/2 bottom-1/4 absolute md:font-medium"></span> -->
+                    <!--if you want to put the maker in the bottom of the title-->   
                     <!--cards-->
-                    <div class="relative border-b-4">
-                        <img src="img/NWJNS_TKL-Banner-v3.jpg" alt="nwjns-tkl" class="w-full max-h-96 object-cover">
+                    <div class="relative border-b-4 overflow-hidden">
+                        <img src="img/NWJNS_TKL-Banner-v3.jpg" alt="nwjns-tkl" class="w-full max-h-96 object-cover transform hover:scale-125 transition ease-in-out duration-300" id="banner">
                         <div>
-                            <!-- <span class="font-bold text-6xl absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-1/2 md:text-9xl">NWJNS</span> -->
-                            <span class="text-center uppercase font-medium text-xl left-1/2 -translate-x-1/2 translate-y-1/2  bottom-1/4 absolute md:font-bold">By Abats' Keyboard Club</span>
-                            <span class="font-bold text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-9xl">NWJNS</span>
-                            <!-- <span class="text-center uppercase font-normal text-xl left-1/2 -translate-x-1/2 -translate-y-1/4 top-1/4 absolute md:font-medium">By Abats' Keyboard Club</span> -->
+                            <span class="font-bold text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-9xl" id="title">NWJNS</span>
+                            <span class="text-center uppercase font-normal text-xl left-1/2 -translate-x-1/2 -translate-y-1/4 top-1/4 absolute md:font-medium">By Abats' Keyboard Club</span>
                         </div>
                     </div>
 
-                    <div class="relative border-b-4">
-                        <img src="img/Ahgase_TKL-Banner.jpg" alt="ahgase-tkl" class="w-full max-h-96  object-cover">
+                    <div class="relative border-b-4 overflow-hidden">
+                        <img src="img/Ahgase_TKL-Banner.jpg" alt="ahgase-tkl" class="w-full max-h-96  object-cover transform hover:scale-125 transition ease-in-out duration-300">
                         <div>
                             <span class="font-bold text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-9xl">Ahgase</span>
                             <span class="uppercase font-normal text-xl left-1/2 -translate-x-1/2 -translate-y-1/4 top-1/4 absolute md:font-medium">By Poly.Works</span>
-                            <!-- <span class="uppercase font-normal text-xl left-1/2 -translate-x-1/2 translate-y-1/2 bottom-1/4 absolute md:font-medium">By Poly.Works</span> -->
-                            <!--if you want to put the maker in the bottom of the title-->    
                         </div>
                     </div>
 
-                    <div class="relative border-b-4">
-                        <img src="img/Jinsoul_TKL-Banner.jpeg" alt="jinsoul-tkl" class="w-full max-h-96  object-cover">
+                    <div class="relative border-b-4 overflow-hidden">
+                        <img src="img/Jinsoul_TKL-Banner.jpeg" alt="jinsoul-tkl" class="w-full max-h-96  object-cover transform hover:scale-125 transition ease-in-out duration-300">
                         <div>
                             <span class="font-bold text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-9xl">Jinsoul</span>
-                            <!-- <span class="uppercase font-medium text-xl left-1/2 -translate-x-1/2 translate-y-1/2  bottom-1/4 absolute md:font-bold">By Perry.Works</span> -->
                             <span class="uppercase font-medium text-xl left-1/2 -translate-x-1/2 -translate-y-1/4 top-1/4 absolute md:font-medium">By Perry.Works</span>
                         </div>
                     </div>
 
-                    <div class="relative border-b-4">
-                        <img src="img/Nayeon_TKL-Banner.jpg" alt="nayeon-tkl" class="w-full max-h-96  object-cover">
+                    <div class="relative border-b-4 overflow-hidden">
+                        <img src="img/Nayeon_TKL-Banner.jpg" alt="nayeon-tkl" class="w-full max-h-96  object-cover transform hover:scale-125 transition ease-in-out duration-300">
                         <div>
                             <span class="font-bold text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-9xl">Nayeon</span>
-                            <!-- <span class="text-center uppercase font-medium text-xl left-1/2 -translate-x-1/2 translate-y-1/2  bottom-1/4 absolute md:font-bold">By Abats' Keyboard Club</span> -->
                             <span class="text-center uppercase font-medium text-xl left-1/2 -translate-x-1/2 -translate-y-1/4 top-1/4 absolute md:font-medium">By Abats' Keyboard Club</span>
                         </div>
                     </div>
 
-                    
+
+
+                     <!--original default add to cart placement-->
+                            <!-- <div class="flex justify-center transform hover:scale-110 transition ease-out duration-500 place-self-end">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
+                            </div> -->
+
+
                     <h3 class="text-center m-4 font-bold md:text-left pt-3">New Arrival</h3>
                     <div class="mt-5 grid lg:grid-cols-4 gap-9 p-4">
-                        <div class="bg-purple-400 rounded-lg overflow-hidden">
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
                             <img src="img/keycaps/item1-keycaps.webp"alt="keycaps1" class="w-full h-48 object-cover">
                             <div class="m-4">
-                                <span class="text-base">NOPPOO Kiki's Delivery Service Cherry Profile Keycaps Set</span>
-                                <span class="block">₱???</span>
-                                <div class="flex justify-center">
-                                    <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
-                                </div>
+                                <span class="text-base mb-10">NOPPOO Kiki's Delivery Service Cherry Profile Keycaps Set</span>
+                                <span class="block">₱???</span> 
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
                             </div>
                         </div>
-                        <div class="bg-purple-400 rounded-lg overflow-hidden">
-                            <img src="img/keycaps/item2-keycaps.webp"alt="keycaps1" class="w-full h-48 object-cover">
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/keycaps/item2-keycaps.webp"alt="keycaps2" class="w-full h-48 object-cover">
                             <div class="m-4">
                                 <span class="text-base">YUNZII Coffee Cat Cherry Keycap Set</span>
                                 <span class="block">₱???</span>
-                                <div class="flex justify-center">
-                                    <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500">Add to Cart</span>
-                                </div>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
                             </div>
                         </div>
-                        <div class="bg-purple-400 rounded-lg overflow-hidden">
-                            <img src="img/keycaps/item3-keycaps.webp"alt="keycaps1" class="w-full h-48 object-cover">
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/keycaps/item3-keycaps.webp"alt="keycaps3" class="w-full h-48 object-cover">
                             <div class="m-4">
                                 <span class="text-base">KeyTok Back In The Game Cherry Profile Keycaps</span>
                                 <span class="block">₱???</span>
-                                <div class="flex justify-center">
-                                    <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500">Add to Cart</span>
-                                </div>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
                             </div>
                         </div>
-                        <div class="bg-purple-400 rounded-lg overflow-hidden">
-                            <img src="img/keycaps/item4-keycaps.webp"alt="keycaps1" class="w-full h-48 object-cover">
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/keycaps/item4-keycaps.webp"alt="keycaps4" class="w-full h-48 object-cover">
                             <div class="m-4">
                                 <span class="text-base">WINMIX Moss Green Cherry Profile Keycap Set</span>
                                 <span class="block">₱???</span>
-                                <div class="flex justify-center">
-                                    <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500">Add to Cart</span>
-                                </div>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                    <h3 class="text-center m-4 font-bold md:text-left pt-3">Switches</h3>
+                    <div class="mt-5 grid lg:grid-cols-4 gap-9 p-4">
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/switches/item1-switches.webp"alt="switches1" class="w-full h-48 object-cover">
+                            <div class="m-4">
+                                <span class="text-base">Gateron Dual-Rail Lunar Probe Switch</span>
+                                <span class="block">₱???</span>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/switches/item2-switches.webp"alt="switches2" class="w-full h-48 object-cover">
+                            <div class="m-4">
+                                <span class="text-base">Varmilo & Kailh Prestige Series Switch</span>
+                                <span class="block">₱???</span>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/switches/item3-switches.webp"alt="switches3" class="w-full h-48 object-cover">
+                            <div class="m-4">
+                                <span class="text-base">Kailh CP Series POM Switches</span>
+                                <span class="block">₱???</span>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/switches/item4-switches.webp"alt="switches4" class="w-full h-48 object-cover">
+                            <div class="m-4">
+                                <span class="text-base">TTC Violet Sunset Linear Switches</span>
+                                <span class="block">₱???</span>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h3 class="text-center m-4 font-bold md:text-left pt-3">Accessories</h3>
+                    <div class="mt-5 grid lg:grid-cols-4 gap-9 p-4">
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/accessories/item1-accessories.webp"alt="accessories1" class="w-full h-48 object-cover">
+                            <div class="m-4">
+                                <span class="text-base">YUNZII Darling Custom Coiled Aviator USB Cable</span>
+                                <span class="block">₱???</span>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500 cursor-pointer">Add to Cart</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/accessories/item2-accessories.webp" alt="accessories2" class="w-full h-48 object-cover">
+                            <div class="m-4">
+                                <span class="text-base">Switch Opener Keycaps Opener Lubrication Kit</span>
+                                <span class="block">₱???</span>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500">Add to Cart</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/accessories/item3-accessories.webp"alt="accessories3" class="w-full h-48 object-cover">
+                            <div class="m-4">
+                                <span class="text-base">YUNZII Cleaning Keyboard Brush</span>
+                                <span class="block">₱???</span>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500">Add to Cart</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-400 rounded-lg overflow-hidden hover:shadow-2xl shadow-inner relative h-96">
+                            <img src="img/accessories/item4-accessories.webp"alt="accessories4" class="w-full h-48 object-cover">
+                            <div class="m-4">
+                                <span class="text-base">ZOMOPLUS Keycaps Puller</span>
+                                <span class="block">₱???</span>
+                            </div>
+                            <div class="transform hover:scale-110 transition ease-out duration-500 absolute bottom-0 right-0 m-4">
+                                <span class="block border-2 border-white rounded-full text-center p-2 text-sm hover:bg-white hover:text-purple-500">Add to Cart</span>
                             </div>
                         </div>
                     </div>
 
                 </div>
-
+                <!--content body-->
 
              </main>
 
+             <footer>
+                <!--wrapper-->
+                <div class="bg-purple-400">
+                    <div class="flex flex-col items-center p-3 pb-7">
+                        <h2 class="font-bold text-center text-xl pt-5 pb-2">SUBSCRIBE TO OUR NEWSLETTER</h2>
+                        <span class="block pb-5">Get the latest updates on new products and upcoming sales</span>
+                        <div class="flex">
+                            <div class="px-5">
+                                <input type="text" class="rounded-full p-3 w-auto md:pr-48" placeholder="enter your email address hahahahahha" id="email">
+                            </div>
+                            <div class="px-5">
+                                <button class="border-white border-2 rounded-full px-10 py-3 items-center hover:bg-white hover:text-purple-500 transition duration-300">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!--footer menu-->
+                <div class="bg-purple-600">
+                    <div class="grid md:grid-cols-3 gap-10 p-5 items center md:place-items-center ">
 
+                        <div class="border-b-2 border-white md:border-b-0 ">
+
+                            <div class="flex flex-row justify-between items-center">
+                                <div>
+                                    <h3 class="font-bold text-lg uppercase mb-2">Products</h3>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 block md:hidden cursor-pointer" id="chevron-prod">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>  
+                            </div>
+                            <div> 
+                                    <ul class="mb-5 hidden md:block font-light" id="submenu-products">
+                                        <li class="my-2">
+                                            <a href="#">Keyboards</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="#">Keycaps</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="#">Accessories</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="#">Combo</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                                
+                        </div>
+                                
+                        <div class="border-b-2 border-white md:border-b-0">
+                            <div class="flex flex-row justify-between items-center">
+                                <div>
+                                    <h3 class="font-bold text-lg uppercase mb-2">Information</h3>
+                                </div>
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 block md:hidden cursor-pointer" id="chevron-info">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>  
+                            </div>
+                            <div>
+                                <ul class="mb-5 hidden md:block font-light" id="submenu-information">
+                                    <li class="my-2">Guide</li>
+                                    <li class="my-2">Support</li>
+                                    <li class="my-2">Shipping and Return</li>
+                                    <li class="my-2">Terms and Conditions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="items-center">
+                            <a href=""><img src="/img/KBoardsv3-Logo.png" alt="footer-logo" class="px-4 w-42 h-32 object-contain -mt-10 -mb-5 -ml-5 items-center"></a>
+                            <ul class="font-light">
+                                <li class="my-2">Laguna, Philippines</li>
+                                <li class="my-2">Call us at +63-2-8123-4567</li>
+                                <li class="my-2">Email: kboards_ph@kboards.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-purple-400 flex justify-around">
+                    <div class="p-4 text-xs">
+                        <span>© 2024 KBoards. All Rights Reserved. For Keyboard Enthusiasts, by Keyboard Enthusiasts.</span> 
+                    </div>
+                    <div class="">
+                        <!-- <p>Icons</p> -->
+                        <ul class="flex flex-row">
+                            <li>
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-10" id="paypal"><path fill="#139AD6" d="M49.2 28.2h-3.4c-.2 0-.4.2-.5.4l-1.4 8.8c0 .2.1.3.3.3H46c.2 0 .3-.1.3-.3l.4-2.5c0-.2.2-.4.5-.4h1.1c2.3 0 3.6-1.1 3.9-3.3.2-.9 0-1.7-.4-2.2-.6-.5-1.5-.8-2.6-.8m.4 3.3c-.2 1.2-1.1 1.2-2 1.2H47l.4-2.3c0-.1.1-.2.3-.2h.2c.6 0 1.2 0 1.5.4.2.1.2.4.2.9"></path><path fill="#263B80" d="M24.7 28.2h-3.4c-.2 0-.4.2-.5.4l-1.4 8.8c0 .2.1.3.3.3h1.6c.2 0 .4-.2.5-.4l.4-2.4c0-.2.2-.4.5-.4h1.1c2.3 0 3.6-1.1 3.9-3.3.2-.9 0-1.7-.4-2.2-.6-.5-1.4-.8-2.6-.8m.4 3.3c-.2 1.2-1.1 1.2-2 1.2h-.5l.4-2.3c0-.1.1-.2.3-.2h.2c.6 0 1.2 0 1.5.4.1.1.2.4.1.9M35 31.4h-1.6c-.1 0-.3.1-.3.2l-.1.5-.1-.2c-.4-.5-1.1-.7-1.9-.7-1.8 0-3.4 1.4-3.7 3.3-.2 1 .1 1.9.6 2.5.5.6 1.2.8 2.1.8 1.5 0 2.3-.9 2.3-.9l-.1.5c0 .2.1.3.3.3H34c.2 0 .4-.2.5-.4l.9-5.6c-.1-.1-.3-.3-.4-.3m-2.3 3.2c-.2.9-.9 1.6-1.9 1.6-.5 0-.9-.2-1.1-.4-.2-.3-.3-.7-.3-1.2.1-.9.9-1.6 1.8-1.6.5 0 .8.2 1.1.4.3.3.4.8.4 1.2"></path><path fill="#139AD6" d="M59.4 31.4h-1.6c-.1 0-.3.1-.3.2l-.1.5-.1-.2c-.4-.5-1.1-.7-1.9-.7-1.8 0-3.4 1.4-3.7 3.3-.2 1 .1 1.9.6 2.5.5.6 1.2.8 2.1.8 1.5 0 2.3-.9 2.3-.9l-.1.5c0 .2.1.3.3.3h1.5c.2 0 .4-.2.5-.4l.9-5.6c-.1-.1-.2-.3-.4-.3m-2.3 3.2c-.2.9-.9 1.6-1.9 1.6-.5 0-.9-.2-1.1-.4-.2-.3-.3-.7-.3-1.2.1-.9.9-1.6 1.8-1.6.5 0 .8.2 1.1.4.4.3.5.8.4 1.2"></path><path fill="#263B80" d="M43.7 31.4H42c-.2 0-.3.1-.4.2L39.4 35l-1-3.2c-.1-.2-.2-.3-.5-.3h-1.6c-.2 0-.3.2-.3.4l1.8 5.3-1.7 2.4c-.1.2 0 .5.2.5h1.6c.2 0 .3-.1.4-.2l5.5-7.9c.3-.3.1-.6-.1-.6"></path><path fill="#139AD6" d="m61.3 28.5-1.4 9c0 .2.1.3.3.3h1.4c.2 0 .4-.2.5-.4l1.4-8.8c0-.2-.1-.3-.3-.3h-1.6c-.1-.1-.2 0-.3.2"></path><path fill="#263B80" d="M12 25.2c-.7-.8-2-1.2-3.8-1.2h-5c-.3 0-.6.3-.7.6l-2 13.1c0 .3.2.5.4.5H4l.8-4.9v.2c.1-.3.4-.6.7-.6H7c2.9 0 5.1-1.2 5.8-4.5v-.3c-.1 0-.1 0 0 0 .1-1.3-.1-2.1-.8-2.9"></path><path fill="#139AD6" d="M12.7 28.1v.3c-.7 3.4-2.9 4.5-5.8 4.5H5.4c-.3 0-.6.3-.7.6l-1 6.1c0 .2.1.4.4.4h2.6c.3 0 .6-.2.6-.5v-.1l.5-3.1v-.2c0-.3.3-.5.6-.5h.4c2.5 0 4.5-1 5-4 .2-1.2.1-2.3-.5-3-.1-.2-.3-.4-.6-.5"></path><path fill="#232C65" d="M12 27.8c-.1 0-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.4-.1-.8-.1-1.3-.1H6.2c-.1 0-.2 0-.3.1-.2.1-.3.3-.3.5l-.8 5.2v.2c.1-.3.4-.6.7-.6H7c2.9 0 5.1-1.2 5.8-4.5 0-.1 0-.2.1-.3-.2-.1-.3-.2-.5-.2-.3-.1-.3-.1-.4-.1"></path></svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20" id="visa"><path fill="#3C58BF" d="m23.6 41 3.2-18h5l-3.1 18z"></path><path fill="#293688" d="m23.6 41 4.1-18h4.1l-3.1 18z"></path><path fill="#3C58BF" d="M46.8 23.2c-1-.4-2.6-.8-4.6-.8-5 0-8.6 2.5-8.6 6.1 0 2.7 2.5 4.1 4.5 5 2 .9 2.6 1.5 2.6 2.3 0 1.2-1.6 1.8-3 1.8-2 0-3.1-.3-4.8-1l-.7-.3-.7 4.1c1.2.5 3.4 1 5.7 1 5.3 0 8.8-2.5 8.8-6.3 0-2.1-1.3-3.7-4.3-5-1.8-.9-2.9-1.4-2.9-2.3 0-.8.9-1.6 2.9-1.6 1.7 0 2.9.3 3.8.7l.5.2.8-3.9z"></path><path fill="#293688" d="M46.8 23.2c-1-.4-2.6-.8-4.6-.8-5 0-7.7 2.5-7.7 6.1 0 2.7 1.6 4.1 3.6 5 2 .9 2.6 1.5 2.6 2.3 0 1.2-1.6 1.8-3 1.8-2 0-3.1-.3-4.8-1l-.7-.3-.7 4.1c1.2.5 3.4 1 5.7 1 5.3 0 8.8-2.5 8.8-6.3 0-2.1-1.3-3.7-4.3-5-1.8-.9-2.9-1.4-2.9-2.3 0-.8.9-1.6 2.9-1.6 1.7 0 2.9.3 3.8.7l.5.2.8-3.9z"></path><path fill="#3C58BF" d="M55.4 23c-1.2 0-2.1.1-2.6 1.3L45.3 41h5.4l1-3h6.4l.6 3h4.8l-4.2-18h-3.9zm-2.3 12c.3-.9 2-5.3 2-5.3s.4-1.1.7-1.8l.3 1.7s1 4.5 1.2 5.5h-4.2V35z"></path><path fill="#293688" d="M56.6 23c-1.2 0-2.1.1-2.6 1.3L45.3 41h5.4l1-3h6.4l.6 3h4.8l-4.2-18h-2.7zm-3.5 12c.4-1 2-5.3 2-5.3s.4-1.1.7-1.8l.3 1.7s1 4.5 1.2 5.5h-4.2V35z"></path><path fill="#3C58BF" d="m14.4 35.6-.5-2.6c-.9-3-3.8-6.3-7-7.9l4.5 16h5.4l8.1-18h-5.4l-5.1 12.5z"></path><path fill="#293688" d="m14.4 35.6-.5-2.6c-.9-3-3.8-6.3-7-7.9l4.5 16h5.4l8.1-18h-4.4l-6.1 12.5z"></path><path fill="#FFBC00" d="m.5 23 .9.2c6.4 1.5 10.8 5.3 12.5 9.8l-1.8-8.5c-.3-1.2-1.2-1.5-2.3-1.5H.5z"></path><path fill="#F7981D" d="M.5 23c6.4 1.5 11.7 5.4 13.4 9.9l-1.7-7.1c-.3-1.2-1.3-1.9-2.4-1.9L.5 23z"></path><path fill="#ED7C00" d="M.5 23c6.4 1.5 11.7 5.4 13.4 9.9L12.7 29c-.3-1.2-.7-2.4-2.1-2.9L.5 23z"></path><path fill="#051244" d="M19.4 35 16 31.6l-1.6 3.8-.4-2.5c-.9-3-3.8-6.3-7-7.9l4.5 16h5.4l2.5-6zM28.7 41l-4.3-4.4-.8 4.4h5.1zM40.2 34.8c.4.4.6.7.5 1.1 0 1.2-1.6 1.8-3 1.8-2 0-3.1-.3-4.8-1l-.7-.3-.7 4.1c1.2.5 3.4 1 5.7 1 3.2 0 5.8-.9 7.3-2.5l-4.3-4.2zM46 41h4.7l1-3h6.4l.6 3h4.8l-1.7-7.3-6-5.8.3 1.6s1 4.5 1.2 5.5h-4.2c.4-1 2-5.3 2-5.3s.4-1.1.7-1.8"></path></svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20" id="mastercard"><path fill="#FFB600" d="M63.5 32c0 10.4-8.4 18.9-18.9 18.9-10.4 0-18.9-8.5-18.9-18.9 0-10.4 8.4-18.9 18.8-18.9 10.6 0 19 8.5 19 18.9z"></path><path fill="#F7981D" d="M44.6 13.1c10.4 0 18.9 8.5 18.9 18.9 0 10.4-8.4 18.9-18.9 18.9-10.4 0-18.9-8.5-18.9-18.9"></path><path fill="#FF8500" d="M44.6 13.1c10.4 0 18.9 8.5 18.9 18.9 0 10.4-8.4 18.9-18.9 18.9"></path><path fill="#FF5050" d="M19.2 13.1C8.9 13.2.5 21.6.5 32c0 10.4 8.4 18.9 18.9 18.9 4.9 0 9.3-1.9 12.7-4.9.7-.6 1.3-1.3 1.9-2h-3.9c-.5-.6-1-1.3-1.4-1.9h6.7c.4-.6.8-1.3 1.1-2h-8.9c-.3-.6-.6-1.3-.8-2h10.4c.6-1.9 1-3.9 1-6 0-1.4-.2-2.7-.4-4H26.2c.1-.7.3-1.3.5-2h10.4c-.2-.7-.5-1.4-.8-2h-8.8c.3-.7.7-1.3 1.1-2h6.7c-.4-.7-.9-1.4-1.5-2h-3.7c.6-.7 1.2-1.3 1.9-1.9-3.3-3.1-7.8-4.9-12.7-4.9 0-.2 0-.2-.1-.2z"></path><path fill="#E52836" d="M.5 32c0 10.4 8.4 18.9 18.9 18.9 4.9 0 9.3-1.9 12.7-4.9.7-.6 1.3-1.3 1.9-2h-3.9c-.5-.6-1-1.3-1.4-1.9h6.7c.4-.6.8-1.3 1.1-2h-8.9c-.3-.6-.6-1.3-.8-2h10.4c.6-1.9 1-3.9 1-6 0-1.4-.2-2.7-.4-4H26.2c.1-.7.3-1.3.5-2h10.4c-.2-.7-.5-1.4-.8-2h-8.8c.3-.7.7-1.3 1.1-2h6.7c-.4-.7-.9-1.4-1.5-2h-3.7c.6-.7 1.2-1.3 1.9-1.9-3.3-3.1-7.8-4.9-12.7-4.9h-.1"></path><path fill="#CB2026" d="M19.4 50.9c4.9 0 9.3-1.9 12.7-4.9.7-.6 1.3-1.3 1.9-2h-3.9c-.5-.6-1-1.3-1.4-1.9h6.7c.4-.6.8-1.3 1.1-2h-8.9c-.3-.6-.6-1.3-.8-2h10.4c.6-1.9 1-3.9 1-6 0-1.4-.2-2.7-.4-4H26.2c.1-.7.3-1.3.5-2h10.4c-.2-.7-.5-1.4-.8-2h-8.8c.3-.7.7-1.3 1.1-2h6.7c-.4-.7-.9-1.4-1.5-2h-3.7c.6-.7 1.2-1.3 1.9-1.9-3.3-3.1-7.8-4.9-12.7-4.9h-.1"></path><path fill="#FFF" d="m26.1 36.8.3-1.7c-.1 0-.3.1-.5.1-.7 0-.8-.4-.7-.6l.6-3.5h1.1l.3-1.9h-1l.2-1.2h-2s-1.2 6.6-1.2 7.4c0 1.2.7 1.7 1.6 1.7.6 0 1.1-.2 1.3-.3zM26.8 33.6c0 2.8 1.9 3.5 3.5 3.5 1.5 0 2.1-.3 2.1-.3l.4-1.9s-1.1.5-2.1.5c-2.2 0-1.8-1.6-1.8-1.6H33s.3-1.3.3-1.8c0-1.3-.7-2.9-2.9-2.9-2.1-.2-3.6 2-3.6 4.5zm3.5-2.9c1.1 0 .9 1.3.9 1.4H29c0-.1.2-1.4 1.3-1.4zM43 36.8l.4-2.2s-1 .5-1.7.5c-1.4 0-2-1.1-2-2.3 0-2.4 1.2-3.7 2.6-3.7 1 0 1.8.6 1.8.6l.3-2.1s-1.2-.5-2.3-.5c-2.3 0-4.6 2-4.6 5.8 0 2.5 1.2 4.2 3.6 4.2.8 0 1.9-.3 1.9-.3zM15.1 28.9c-1.4 0-2.4.4-2.4.4l-.3 1.7s.9-.4 2.2-.4c.7 0 1.3.1 1.3.7 0 .4-.1.5-.1.5h-.9c-1.7 0-3.6.7-3.6 3 0 1.8 1.2 2.2 1.9 2.2 1.4 0 2-.9 2.1-.9l-.1.8H17l.8-5.5c0-2.4-2-2.5-2.7-2.5zm.4 4.5c0 .3-.2 1.9-1.4 1.9-.6 0-.8-.5-.8-.8 0-.5.3-1.2 1.8-1.2.3.1.4.1.4.1zM19.7 37c.5 0 3 .1 3-2.6 0-2.5-2.4-2-2.4-3 0-.5.4-.7 1.1-.7.3 0 1.4.1 1.4.1l.3-1.8s-.7-.2-1.9-.2c-1.5 0-3 .6-3 2.6 0 2.3 2.5 2.1 2.5 3 0 .6-.7.7-1.2.7-.9 0-1.8-.3-1.8-.3l-.3 1.8c.1.2.6.4 2.3.4zM59.6 27.3l-.4 2.7s-.8-1-1.9-1c-1.8 0-3.4 2.2-3.4 4.8 0 1.6.8 3.3 2.5 3.3 1.2 0 1.9-.8 1.9-.8l-.1.7h2l1.5-9.6-2.1-.1zm-.9 5.3c0 1.1-.5 2.5-1.6 2.5-.7 0-1.1-.6-1.1-1.6 0-1.6.7-2.6 1.6-2.6.7 0 1.1.5 1.1 1.7zM4.2 36.9l1.2-7.2.2 7.2H7l2.6-7.2-1.1 7.2h2.1l1.6-9.6H8.9l-2 5.9-.1-5.9H3.9l-1.6 9.6h1.9zM35.2 36.9c.6-3.3.7-6 2.1-5.5.2-1.3.5-1.8.7-2.3h-.4c-.9 0-1.6 1.2-1.6 1.2l.2-1.1h-1.9L33 37h2.2zM47.6 28.9c-1.4 0-2.4.4-2.4.4l-.3 1.7s.9-.4 2.2-.4c.7 0 1.3.1 1.3.7 0 .4-.1.5-.1.5h-.9c-1.7 0-3.6.7-3.6 3 0 1.8 1.2 2.2 1.9 2.2 1.4 0 2-.9 2.1-.9l-.1.8h1.8l.8-5.5c.1-2.4-2-2.5-2.7-2.5zm.5 4.5c0 .3-.2 1.9-1.4 1.9-.6 0-.8-.5-.8-.8 0-.5.3-1.2 1.8-1.2.3.1.3.1.4.1zM52 36.9c.6-3.3.7-6 2.1-5.5.2-1.3.5-1.8.7-2.3h-.4c-.9 0-1.6 1.2-1.6 1.2l.2-1.1h-1.9L49.8 37H52z"></path><g fill="#DCE5E5"><path d="M23 35.4c0 1.2.7 1.7 1.6 1.7.7 0 1.3-.2 1.5-.3l.3-1.7c-.1 0-.3.1-.5.1-.7 0-.8-.4-.7-.6l.6-3.5h1.1l.3-1.9h-1l.2-1.2M27.8 33.6c0 2.8.9 3.5 2.5 3.5 1.5 0 2.1-.3 2.1-.3l.4-1.9s-1.1.5-2.1.5c-2.2 0-1.8-1.6-1.8-1.6H33s.3-1.3.3-1.8c0-1.3-.7-2.9-2.9-2.9-2.1-.2-2.6 2-2.6 4.5zm2.5-2.9c1.1 0 1.3 1.3 1.3 1.4H29c0-.1.2-1.4 1.3-1.4zM43 36.8l.4-2.2s-1 .5-1.7.5c-1.4 0-2-1.1-2-2.3 0-2.4 1.2-3.7 2.6-3.7 1 0 1.8.6 1.8.6l.3-2.1s-1.2-.5-2.3-.5c-2.3 0-3.6 2-3.6 5.8 0 2.5.2 4.2 2.6 4.2.8 0 1.9-.3 1.9-.3zM12.4 31.1s.9-.4 2.2-.4c.7 0 1.3.1 1.3.7 0 .4-.1.5-.1.5h-.9c-1.7 0-3.6.7-3.6 3 0 1.8 1.2 2.2 1.9 2.2 1.4 0 2-.9 2.1-.9l-.1.8H17l.8-5.5c0-2.3-2-2.4-2.8-2.4m1.5 4.3c0 .3-1.2 1.9-2.4 1.9-.6 0-.8-.5-.8-.8 0-.5.3-1.2 1.8-1.2.3.1 1.4.1 1.4.1zM17.5 36.8s.6.2 2.3.2c.5 0 3 .1 3-2.6 0-2.5-2.4-2-2.4-3 0-.5.4-.7 1.1-.7.3 0 1.4.1 1.4.1l.3-1.8s-.7-.2-1.9-.2c-1.5 0-2 .6-2 2.6 0 2.3 1.5 2.1 1.5 3 0 .6-.7.7-1.2.7M59.2 30s-.8-1-1.9-1c-1.8 0-2.4 2.2-2.4 4.8 0 1.6-.2 3.3 1.5 3.3 1.2 0 1.9-.8 1.9-.8l-.1.7h2l1.5-9.6m-2.6 5.2c0 1.1-.9 2.5-2 2.5-.7 0-1.1-.6-1.1-1.6 0-1.6.7-2.6 1.6-2.6.7 0 1.5.5 1.5 1.7zM4.2 36.9l1.2-7.2.2 7.2H7l2.6-7.2-1.1 7.2h2.1l1.6-9.6H9.7l-2.8 5.9-.1-5.9H5.7l-3.4 9.6h1.9zM33.1 36.9h2.1c.6-3.3.7-6 2.1-5.5.2-1.3.5-1.8.7-2.3h-.4c-.9 0-1.6 1.2-1.6 1.2l.2-1.1M44.9 31.1s.9-.4 2.2-.4c.7 0 1.3.1 1.3.7 0 .4-.1.5-.1.5h-.9c-1.7 0-3.6.7-3.6 3 0 1.8 1.2 2.2 1.9 2.2 1.4 0 2-.9 2.1-.9l-.1.8h1.8l.8-5.5c0-2.3-2-2.4-2.8-2.4m1.5 4.3c0 .3-1.2 1.9-2.4 1.9-.6 0-.8-.5-.8-.8 0-.5.3-1.2 1.8-1.2.4.1 1.4.1 1.4.1zM49.9 36.9H52c.6-3.3.7-6 2.1-5.5.2-1.3.5-1.8.7-2.3h-.4c-.9 0-1.6 1.2-1.6 1.2l.2-1.1"></path></g></svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+             </footer>
 
 
 
@@ -160,7 +365,7 @@
 
         </div>
          <!--wrapper-->
-
-
+        <!--javascript (includes script for the hidden menu)-->
+        <script src="src/index.js"></script>
     </body>
 </html>
