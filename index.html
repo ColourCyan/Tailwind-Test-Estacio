@@ -1,86 +1,178 @@
 <!DOCTYPE html>
 <html class="home" lang="en">
-    <head>
-        <title> Z Urban Style</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="src/output.css" rel="stylesheet" >
-        <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
-    </head>
-    <body class="bg-gray-100">
-        <!-- Navbar -->
-        <nav class="bg-white text-black py-4 " >
-            <div class="container mx-auto flex justify-between items-center px-1">
-                <a href="#" class="text-xl hover:text-pink-600 font-bold">Z URBAN STYLE</a>
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:text-pink-600 font-bold" >NEW ARRIVAL</a></li>
-                    <li><a href="#" class="hover:text-pink-600 font-bold">COLLECTION</a></li>
-                    <li><a href="#" class="hover:text-pink-600 font-bold">FAQ</a></li>
-                </ul>
-            </div>
-        </nav>
-        
-        <!-- Hero Section -->
-        <header class=" text-white py-24  bg-cover bg-center relative" style="background-image: url('img/body_main_bg.png'); height: 800px;">
-            <div class="container mx-auto text-left ml-4 mr-8">
-                <h1 class="text-8xl font-bold mb-2">UNLEASH <BR>YOUR <BR>URBAN<br> STYLE</h1>
-                <p class="text-lg mb-4 text-white font-bold" style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Embrace your current flair and elevate your style with our carefully picked collection.<br> Discover the hottest trends, timeless classics, and everything in between to let you express yourself uniquely.<br> From sleek designs to bold statements, we're here to help you stand out and leave a lasting impression.<br> Explore our range and redefine what  <span class="text-blue-500">URBAN STYLE MEANS FOR YOU.</span> </p>
-                <a href="#COLLECTION PAGE" class="bg-transparent border border-black rounded-lg font-bold text-white px-6 py-3  inline-block hover:bg-blue-400 hover:text-white">VIEW COLLECTION</a>
-            </div>
-        </header>
-        
-        <!-- Features Section -->
-        <section class="py-16 px-4">
-            <div class="container mx-auto">
-                <h2 class="text-2xl font-bold mb-8 text-center">NEW ARRIVAL</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-md">
+
+<head>
+    <title> Z Urban Style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="src/output.css" rel="stylesheet">
+    <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white text-black py-4 ">
+        <div class="container mx-auto flex justify-between items-center px-1">
+            <a href="#" class="text-xl hover:text-pink-600 font-bold">Z URBAN STYLE</a>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-pink-600 font-bold">NEW ARRIVAL</a></li>
+                <li><a href="collection.html" class="hover:text-pink-600 font-bold">COLLECTION</a></li>
+                <li><a href="#" class="hover:text-pink-600 font-bold">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class=" text-white py-24  bg-cover bg-center relative"
+        style="background-image: url('img/body_main_bg.png'); height: 800px;">
+        <div class="container mx-auto text-left ml-4 mr-8">
+            <h1 class="text-8xl font-bold mb-2">UNLEASH <BR>YOUR <BR>URBAN<br> STYLE</h1>
+            <p class="text-lg mb-4 text-white font-bold"
+                style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Embrace your
+                current flair and elevate your style with our carefully picked collection.<br> Discover the hottest
+                trends, timeless classics, and everything in between to let you express yourself uniquely.<br> From
+                sleek designs to bold statements, we're here to help you stand out and leave a lasting impression.<br>
+                Explore our range and redefine what <span class="text-blue-500">URBAN STYLE MEANS FOR YOU.</span> </p>
+            <a href="collection.html"
+                class="bg-transparent border border-pink-600 rounded-lg font-bold text-white px-6 py-3  inline-block hover:bg-pink-500 hover:text-white">VIEW
+                COLLECTION</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold mb-8 text-center">NEW ARRIVAL</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class=" rounded overflow-hidden  transition-transform transform hover:scale-105">
                         <img src="img/streetjacket.png">
                         <h3 class="text-xl font-bold mb-2">STREET JACKET</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque pretium neque, et accumsan enim gravida in. Praesent risus ante, malesuada nec tincidunt ut, blandit at libero.</p>
-                   <h3 class="font-bold">$ 46.00</h3>
-                   <p class="inline-block">
-                    <span class="mr-4 relative">S 
-                        <span class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
-                            <span class="text-white">S</span>
-                        </span>
-                    </span>
-                    <span class="mr-4 relative">M <span class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
-                        <span class="text-white">M</span>
-                         </span>
-                        </span>
-                        <span class="mr-4 relative">S 
-                            <span class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
-                                <span class="text-white">S</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque pretium neque,
+                            et accumsan enim gravida in. Praesent risus ante, malesuada nec tincidunt ut, blandit at
+                            libero.</p>
+                        <h3 class="font-bold">$ 46.00</h3>
+                        <p class="inline-block">
+                            <span class="mr-4 relative">S
+                                <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">S</span>
+                                </span>
                             </span>
-                        </span>
-                </p>
-                </p>
+                            <span class="mr-4 relative">M <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">M</span>
+                                </span>
+                            </span>
+                            <span class="mr-4 relative">L
+                                <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">L</span>
+                                </span>
+                            </span>
+                        </p>
+                        </p>
+                        <BR>
+                        <a href="#ADDTOCART"
+                            class=" bg-transparent border border-pink-600 rounded-lg font-bold text-black ml-9 px-20 py-1  inline-block hover:bg-pink-500 hover:text-white">ADD
+                            TO CART</a>
                     </div>
-                    <div class="bg-white  p-8 rounded-lg shadow-md" >
+                </div>
+                <div class="bg-white  p-8 rounded-lg shadow-md">
+                    <div class=" rounded overflow-hidden  transition-transform transform hover:scale-105">
                         <img src="img/sneakers.png">
                         <h3 class="text-xl font-bold mb-2">STREET SNEAKERS</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque pretium neque,
+                            et accumsan enim gravida in. Praesent risus ante, malesuada nec tincidunt ut, blandit at
+                            libero.</p>
+                        <h3 class="font-bold">$ 124.00</h3>
+                        <p class="inline-block">
+                            <span class="mr-4 relative">39
+                                <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">39</span>
+                                </span>
+                            </span>
+                            <span class="mr-4 relative">40 <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">40</span>
+                                </span>
+                            </span>
+                            <span class="mr-4 relative">41
+                                <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">41</span>
+                                </span>
+                            </span>
+                            <span class="mr-4 relative">43
+                                <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">43</span>
+                                </span>
+                            </span>
+                        </p>
+                        </p>
+                        <BR>
+                        <a href="#ADDTOCART"
+                            class=" bg-transparent border border-pink-600 rounded-lg font-bold text-black ml-9 px-20 py-1  inline-block hover:bg-pink-500 hover:text-white">ADD
+                            TO CART</a>
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md" >
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class=" rounded overflow-hidden  transition-transform transform hover:scale-105">
                         <img src="img/tshirt.png">
                         <h3 class="text-xl font-bold mb-2">STREET T-SHIRT</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque pretium neque,
+                            et accumsan enim gravida in. Praesent risus ante, malesuada nec tincidunt ut, blandit at
+                            libero.</p>
+                        <h3 class="font-bold">$ 26.00</h3>
+                        <p class="inline-block">
+                            <span class="mr-4 relative">S
+                                <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">S</span>
+                                </span>
+                            </span>
+                            <span class="mr-4 relative">M <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">M</span>
+                                </span>
+                            </span>
+                            <span class="mr-4 relative">L
+                                <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">L</span>
+                                </span>
+                            </span>
+                            <span class="mr-4 relative">XL
+                                <span
+                                    class="absolute top-0 left-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                    <span class="text-white">XL</span>
+                                </span>
+                            </span>
+                        </p>
+                        </p>
+                        <BR>
+                        <a href="#ADDTOCART"
+                            class=" bg-transparent border border-pink-600 rounded-lg font-bold text-black ml-9 px-20 py-1  inline-block hover:bg-pink-500 hover:text-white">ADD
+                            TO CART</a>
                     </div>
                 </div>
             </div>
-        </section>
-<!-- CONTENT TO FOLLOW -->
-        <div class="bg-white p-8 rounded-lg shadow-md py-16 px-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                
         </div>
-        
-        <!-- Footer Section -->
-        <footer class="bg-gray-800 text-white py-8 hover:text-pink-600 font-bold">
-            <div class="container mx-auto text-center">
-                <p>&copy; 2024 Your Company. All rights reserved.</p>
-                
-            </div>
-        </footer>
-    </body>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-center items-center space-x-8">
+            <a href="#facebook.com" target="_blank"> <img src="img/fbicon.png " class="w-10 h-10"  rel="noopener noreferrer" >
+    </a>
+    <a href="#instagram.com" target="_blank"> <img src="img/igicon.png " class="w-10 h-10"  rel="noopener noreferrer" >
+    </a>
+    <a href="#youtube.com" target="_blank"> <img src="img/yticon.png" rel="noopener noreferrer" class="w-10 h-10"  rel="noopener noreferrer" >
+    </a>
+        </div>
+    </footer>
+</body>
+
 </html>
