@@ -8,28 +8,11 @@
   <link rel="stylesheet" href="/main/output.css">
 </head>
 
-<style>
-  /* bit inline css for navbar color asdasdasdasdasd */
-  .bg-navbar {
-    background: linear-gradient(150deg, #b30000, #030303);
 
-  }
+<body class="flex flex-col min-h-screen bg-slate-800">
 
-  .nav-link {
-    color: #FFFFFF;
-
-    transition: color 0.3s ease-in-out;
-  }
-
-  .nav-link:hover {
-    color: #131b27;
-
-  }
-</style>
-
-<body class="flex flex-col min-h-screen bg-slate-600">
-  <!-- Navbar -->
-  <nav class="bg-navbar shadow-lg">
+  <!--Navbar-->
+  <nav class="bg-gradient-to-r from-red-500 to-black shadow-lg">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-4">
         <div class="flex items-center">
@@ -42,20 +25,18 @@
           </div>
         </div>
         <div class="flex">
-          <a class="nav-link mr-4 hover:text-gray-600" href="#">Home</a>
-          <a class="nav-link mr-4 hover:text-gray-600" href="#">Shop</a>
-          <a class="nav-link mr-4 hover:text-gray-600" href="#">Cart</a>
-          <a class="nav-link hover:text-gray-600" href="#">Suggest a Game</a>
+          <a class="nav-link mr-4 hover:text-gray-600 text-white" href="#">Home</a>
+          <a class="nav-link mr-4 hover:text-gray-600 text-white" href="#">Shop</a>
+          <a class="nav-link mr-4 hover:text-gray-600 text-white" href="#">Cart</a>
+          <a class="nav-link hover:text-gray-600 text-white" href="#">Suggest a Game</a>
         </div>
       </div>
     </div>
   </nav>
-
   <!-- Welcome element -->
 
-  <div class="py-20 text-center text-white bg-cover bg-center"
-    style="background-image: url('/src/img/TEST.jpg');">
-    <h1 class="text-4xl font-bold mb-2">Welcome to Z-Games</h1>
+  <div class="py-20 text-center text-white bg-cover bg-center" style="background-image: url('/src/img/TEST.jpg');">
+    <h1 class="text-4xl font-bold mb-2 text-white">Welcome to Z-Games</h1>
     <p class="text-lg">Buy hot games for a discounted price!</p>
     <button
       class="bg-gray-900 text-white font-bold mt-6 py-2 px-6 rounded-full uppercase tracking-wide hover:bg-gray-100">Shop
@@ -77,36 +58,36 @@
     </div>
 
     <div class="bg-opacity-50 border border-gray-900 rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-64 object-cover object-center" src="/src/img/FFXVI.svg" alt="game">
+      <img class="w-full h-64 object-cover object-center py-8" src="/src/img/FFXVI.png" alt="game">
       <div class="p-4">
         <h2 class="font-semibold text-lg text-white">Final Fantasy XVI</h2>
-        <p class="mt-2 text-white">Discover the world of Diablo 4</p>
+        <p class="mt-2 text-white">An epic dark fantasy world.</p>
         <div class="mt-4 flex justify-between items-center">
-          <span class="font-bold text-xl text-black">$69.99</span>
+          <span class="font-bold text-xl text-white">$69.99</span>
           <button class="bg-gray-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add to Cart</button>
         </div>
       </div>
     </div>
 
     <div class="bg-opacity-50 border border-gray-900 rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-64 object-cover object-center" src="/src/img/Diablo IV.svg" alt="game">
+      <img class="w-full h-64 object-cover object-center size-1" src="/src/img/minecraft-seeklogo.png" alt="game">
       <div class="p-4">
         <h2 class="font-semibold text-lg text-white">Minecraft</h2>
-        <p class="mt-2 text-white">Discover the world of Diablo 4</p>
+        <p class="mt-2 text-white">A game where players place blocks.</p>
         <div class="mt-4 flex justify-between items-center">
-          <span class="font-bold text-xl text-black">$69.99</span>
+          <span class="font-bold text-xl text-white">$69.99</span>
           <button class="bg-gray-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add to Cart</button>
         </div>
       </div>
     </div>
 
     <div class="bg-opacity-50 border border-gray-900 rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-64 object-cover object-center" src="/src/img/Diablo IV.svg" alt="game">
+      <img class="w-full h-64 object-cover object-center" src="/src/img/Spider-Man Miles Morales.png" alt="game">
       <div class="p-4">
-        <h2 class="font-semibold text-lg text-white">Spiderman</h2>
-        <p class="mt-2 text-white">Discover the world of Diablo 4</p>
+        <h2 class="font-semibold text-lg text-white">Spiderman: Miles Morales</h2>
+        <p class="mt-2 text-white">Explore the world of Miles Morales</p>
         <div class="mt-4 flex justify-between items-center">
-          <span class="font-bold text-xl text-black">$69.99</span>
+          <span class="font-bold text-xl text-white">$69.99</span>
           <button class="bg-gray-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add to Cart</button>
         </div>
       </div>
