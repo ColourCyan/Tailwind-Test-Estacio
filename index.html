@@ -8,8 +8,51 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
         <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
     </head>
+
     <body>
-        <div class="container"></div>
+    <!--Navbar-->
+    <nav class="bg-black">
+        <div class="container flex">
+            <!--all category-->
+            <div class="px-8 py-2 bg-primary flex items-center cursor-pointer relative group">
+                <span class="text-white">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <span class="capitalize ml-2 text-white">All Categories</span>
+
+                <div class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="src/images/icons/sticker-logo.png" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Stickers</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="src/images/icons/shirt-logo.png" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Shirts</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="src/images/icons/mug-logo.png" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Mugs</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="src/images/icons/toys-logo.png" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Plushies</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!--navbar links-->
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-6 capitalize">
+                    <a href="#" class="text-white hover:text-primary transition">Seller Centre</a>
+                    <a href="#" class="text-white hover:text-primary transition">Start Selling</a>
+                    <a href="#" class="text-white hover:text-primary transition">Download</a>
+                    <a href="#" class="text-white hover:text-primary transition">Help</a>
+                </div>
+                <a href="#" class="text-white hover:text-primary transition">Login/Register</a>
+            </div>
+        </div>
+    </nav>
+
         <!--Header-->
         <header class="py-4 shadow-sm bg-black">
             <div class="container flex item-center justify-between">
@@ -17,7 +60,6 @@
                 <a href="#">
                     <img src="src/images/logowhite.png" class="w-32">
                 </a>
-
                 <!--searchbar-->
                 <div class="w-full max-w-xl relative flex">
                     <span class="absolute left-4 top-3 text-lg text-gray-400">
@@ -38,23 +80,351 @@
                     </a>
                     <a href="#" class="text-center text-white hover:text-primary transition relative">
                         <div class="text-2xl">
-                            <i class="far fa-heart"></i>
+                            <i class="fas fa-shopping-bag"></i>
                         </div>
-                        <div class="text xs leading-3">Wish List</div>
-                        <span class="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">13</span>
+                        <div class="text xs leading-3">Cart</div>
+                        <span class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">13</span>
                     </a>
                     <a href="#" class="text-center text-white hover:text-primary transition relative">
                         <div class="text-2xl">
-                            <i class="far fa-heart"></i>
+                            <i class="far fa-user"></i>
                         </div>
-                        <div class="text xs leading-3">Wish List</div>
-                        <span class="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">13</span>
+                        <div class="text xs leading-3">Account</div>
                     </a>
                 </div>
             </div>
-
         </header>
+        <!--banner-->
+    <div class="bg-cover bg-no-repeat bg-center py-80" style="background-image: url('src/images/banner.png');">
+    </div>
 
-    
+    <!--category-->
+    <div class="container py-16 ">
+        <h2 class="text-3xl font-medium text-gray-800 uppercase mb-6 text-center">
+            Shop by Category
+        </h2>
+        <div class="grid grid-cols-4 gap-3">
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="src/images/category/anime-sticker.png" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-4xl text-white font-poppins font-medium group-hover:bg-opacity-70 transition">STICKERS</a>
+            </div>
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="src/images/category/anime-shirt.jpg" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-4xl text-white font-poppins font-medium group-hover:bg-opacity-70 transition">SHIRTS</a>
+            </div>
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="src/images/category/anime-mug.png" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-4xl text-white font-poppins font-medium group-hover:bg-opacity-70 transition">MUGS</a>
+            </div>
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="src/images/category/anime-plush.png" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-4xl text-white font-poppins font-medium group-hover:bg-opacity-70 transition">PLUSHIES</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--product wrapper-->
+    <div class="container pb-16">
+        <h2 class="text-3xl font-medium text-gray-800 uppercase mb-6 text-center">new arrival</h2>
+
+        <!--product grid-->
+        <div class="grid grid-cols-4 gap-6">
+            <div class="bg-white shadow rounded-overflow-hidden group">
+                <div class="relative">
+                    <img src="src/images/products/maomao.jpg" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                            maomao Sticker Collection
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-primary font-semibold">P100</p>
+                        <p class="text-sm text-gray-400 line-through">P200</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-gray-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3"></div>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add to cart</a>
+            </div>
+            <div class="bg-white shadow rounded-overflow-hidden group">
+                <div class="relative">
+                    <img src="src/images/products/jinshi.jpg" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                            jinshi Sticker Collection
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-primary font-semibold">P100</p>
+                        <p class="text-sm text-gray-400 line-through">P200</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-gray-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3"></div>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add to cart</a>
+            </div>
+            <div class="bg-white shadow rounded-overflow-hidden group">
+                <div class="relative">
+                    <img src="src/images/products/friereneyeslap.jpg" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                            Frieren eyeslap Sticker Collection
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-primary font-semibold">P100</p>
+                        <p class="text-sm text-gray-400 line-through">P200</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-gray-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3"></div>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add to cart</a>
+            </div>
+            <div class="bg-white shadow rounded-overflow-hidden group">
+                <div class="relative">
+                    <img src="src/images/products/starrail.png" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                            Honkai: Star Rail Sticker Collection
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-primary font-semibold">P100</p>
+                        <p class="text-sm text-gray-400 line-through">P200</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-gray-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3"></div>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add to cart</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--top product-->
+    <div class="container pb-16">
+        <h2 class="text-3xl font-medium text-gray-800 uppercase mb-6 text-center">best seller</h2>
+
+        <!--product grid-->
+        <div class="grid grid-cols-4 gap-6">
+            <div class="bg-white shadow rounded-overflow-hidden group">
+                <div class="relative">
+                    <img src="src/images/products/frieren.jpg" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                            Frieren Sticker Collection
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-primary font-semibold">P100</p>
+                        <p class="text-sm text-gray-400 line-through">P200</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-yellow-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3">(150)</div>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add to cart</a>
+            </div>
+            <div class="bg-white shadow rounded-overflow-hidden group">
+                <div class="relative">
+                    <img src="src/images/products/gojo.jpg" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                            Gojo Satoru Sticker Collection
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-primary font-semibold">P100</p>
+                        <p class="text-sm text-gray-400 line-through">P200</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-yellow-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3">(150)</div>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add to cart</a>
+            </div>
+            <div class="bg-white shadow rounded-overflow-hidden group">
+                <div class="relative">
+                    <img src="src/images/products/ai.jpg" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                            Ai Hoshino Sticker Collection
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-primary font-semibold">P100</p>
+                        <p class="text-sm text-gray-400 line-through">P200</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-yellow-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3">(150)</div>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add to cart</a>
+            </div>
+            <div class="bg-white shadow rounded-overflow-hidden group">
+                <div class="relative">
+                    <img src="src/images/products/bocchi.jpg" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                            Hitori "Bocchi" Gotou Sticker Collection
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-primary font-semibold">P100</p>
+                        <p class="text-sm text-gray-400 line-through">P200</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-yellow-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3">(150)</div>
+                    </div>
+                </div>
+                <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add to cart</a>
+            </div>
+
+        </div>
+
+    </div>
+          
     </body>
 </html>
