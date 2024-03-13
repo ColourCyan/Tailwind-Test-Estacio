@@ -3,35 +3,118 @@
     <head>
         <title> Landing Page </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link href="src/output.css" rel="stylesheet" >
         <script src="https://cdn.tailwindcss.com"></script>
 
     </head>
-    <body>
-        <div class=" bg-gray-500 h-screen bg-center bg cover px-30 py-6" >
-           <nav class="flex items-center">
-            <ul class="flex-1 text-center">
-                <li class="list-none inline-block px-7"><a href="#" class="no-underline text-white text-xl">Home</a></li>
-                <li class="list-none inline-block px-7"><a href="#" class="no-underline text-white text-xl">Features</a></li>
-                <li class="list-none inline-block px-7"><a href="#" class="no-underline text-white text-xl">Contact</a></li>
-                <li class="list-none inline-block px-7"><a href="#" class="no-underline text-white text-xl">About</a></li>
-            </ul>
-        </nav>
-
-        <div class=" text-white mt-48">
-            <h1 class="text-6xl font-semibold leading-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h1>
-            <h1>
-            <p class="max-w-lg">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></h1>
-            <div class="mt-10">
-                <a href="#" class="bg-red-400 rounded-3xl py-3 px-8 font-medium inline-block mr-6 hover:bg-transparent hover:border-black duration-300 hover:border">click here</a>
-                <a href="#" class="bg-red-400 rounded-3xl py-3 px-8 font-medium inline-block mr-6 hover:bg-transparent hover:border-black duration-300 hover:border">click here</a>
-
+    <body class="font-sans bg-gray-200">
+        <div class="bg-cover bg-center h-screen flex items-center" style="background-image: url(img/techbg.jpg)">
+            <header class="absolute top-0 left-0 right-0 z-10 bg-gray-800 bg-opacity-70 py-4">
+                <div class="container mx-auto flex justify-between items-center px-4">
+                    <h1 class="text-white text-lg">Zein Company</h1>
+                    <nav>
+                        <ul class="flex">
+                            <li class="ml-6"><a href="#" class="text-white">Home</a></li>
+                            <li class="ml-6"><a href="#" class="text-white">About</a></li>
+                            <li class="ml-6"><a href="#" class="text-white">Services</a></li>
+                            <li class="ml-6"><a href="#" class="text-white">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+    
+            <div class="container mx-auto text-center text-white">
+                <h2 class="text-6xl font-bold mb-4">Welcome to Zein Company!</h2>
+                <p class="text-3xl mb-8">We provide innovative solutions to your problems.</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <a href="#" class="btn mt-6 text-3xl font-bold">Get Started</a></button>
             </div>
         </div>
+    
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto">
+                <h2 class="text-4xl text-center font-bold mb-8">About Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <img src="img/au.jpg" alt="About Us Image" class="rounded-lg mb-6">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet lorem vitae ex dapibus viverra ut nec magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla et ornare libero, sit amet rutrum lacus.</p>
+                        <p class="text-gray-600 mt-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla et ornare libero, sit amet rutrum lacus. Integer finibus risus sit amet nunc interdum tincidunt. Proin tempor fringilla lectus, a viverra elit vestibulum id.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="py-16">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/hss.jpg" alt="Service 1" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Hardware and Software Support</h3>
+                            <p class="text-gray-600">Some types of IT services, like hardware installation, support and maintenance tend to be outsourced on-demand as it usually involves work like repairs or replacement of outdated equipment.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/nims.jpg" alt="Service 2" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Network Infrastructure Management</h3>
+                            <p class="text-gray-600">The business’s network infrastructure typically includes its internet connectivity and internal networking between computers and other devices. Network services start with the configuration of infrastructure at your location, including setting up servers, installing firewalls for preventing malicious traffic, etc.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/ns.jpg" alt="Service 3" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Network Security</h3>
+                            <p class="text-gray-600">Data is a key component of any organization. Although data is an invaluable asset in many important decisions, strategies and plans, it’s useless without the ability to seamlessly share and safeguard it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="py-16 border-t border-b border-gray-300">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+                <div class="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+                    <form class="p-6">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="form-input border border-gray-300 rounded-md w-full px-3 py-2" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="form-input border border-gray-300 rounded-md w-full px-3 py-2" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" class="form-textarea w-full border border-gray-300 rounded-md p-2" rows="6" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="bg-gray-300 text-white py-2 px-4 rounded hover:bg-blue-300">Send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8">
+                <p class="text-gray-700 mb-2 text-center">Connect with us on social media:</p>
+                <div class="flex justify-center">
+                    <a href="https://www.facebook.com/" class="text-gray-600 hover:text-gray-800 mr-4"><i class="fab fa-facebook-square text-3xl"></i></a>
+                    <a href="https://www.twitter.com/" class="text-gray-600 hover:text-gray-800 mr-4"><i class="fab fa-twitter-square text-3xl"></i></a>
+                    <a href="https://www.instagram.com/" class="text-gray-600 hover:text-gray-800 mr-4"><i class="fab fa-instagram-square text-3xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-gray-800"><i class="fab fa-linkedin text-3xl"></i></a>
+                </div>
+            </div>
         </div>
+    </section>
+    
+        <footer class="bg-gray-800 py-4">
+            <div class="container mx-auto text-center">
+                <p class="text-white">&copy; 2024 Zein Company. All rights reserved.</p>
+            </div>
+        </footer>
     </body>
-</html>
+    </html>
