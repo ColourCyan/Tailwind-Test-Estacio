@@ -1,14 +1,123 @@
 <!DOCTYPE html>
-<html class="home" lang="en">
-    <head>
-        <title> Landing Page </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="src/output.css" rel="stylesheet" >
-        <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
-    </head>
-    <body>
-        <div class="bg-yellow-600">
-            Hello World
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <main class="container mx-auto py-8 px-4">
+
+      <!-- Images Section -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Image 1 -->
+          <div class="text-center">
+              <img src="img/img1.jpg" alt="Image 1" class="rounded-full mx-auto w-32 h-32">
+              <h2 class="text-lg font-bold mt-4">HI, I'M</h2>
+              <div class="flex justify-center mt-2">
+                  <a href="#" class="text-blue-500 hover:text-blue-700 mr-2">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <!-- Facebook Icon SVG -->
+                      </svg>
+                  </a>
+                  <a href="#" class="text-blue-500 hover:text-blue-700 mr-2">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <!-- Discord Icon SVG -->
+                      </svg>
+                  </a>
+                  <a href="#" class="text-blue-500 hover:text-blue-700">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <!-- GitHub Icon SVG -->
+                      </svg>
+                  </a>
+              </div>
+              <p class="text-gray-600 mt-2">Short description about yourself here...</p>
+          </div>
+          <!-- Image 2 -->
+          <div class="text-center">
+              <img src="img/img2.jpg" alt="Image 2" class="rounded-full mx-auto w-32 h-32">
+              <h2 class="text-lg font-bold mt-4">HI, I'M</h2>
+              <div class="flex justify-center mt-2">
+                  <a href="#" class="text-blue-500 hover:text-blue-700 mr-2">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <!-- Facebook Icon SVG -->
+                      </svg>
+                  </a>
+                  <a href="#" class="text-blue-500 hover:text-blue-700 mr-2">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <!-- Discord Icon SVG -->
+                      </svg>
+                  </a>
+                  <a href="#" class="text-blue-500 hover:text-blue-700">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <!-- GitHub Icon SVG -->
+                      </svg>
+                  </a>
+              </div>
+              <p class="text-gray-600 mt-2">Short description about yourself here...</p>
+          </div>
+          <!-- Image 3 -->
+          <div class="text-center">
+              <img src="img/img3.jpg" alt="Image 3" class="rounded-full mx-auto w-32 h-32">
+              <h2 class="text-lg font-bold mt-4">HI, I'M</h2>
+              <div class="flex justify-center mt-2">
+                  <a href="#" class="text-blue-500 hover:text-blue-700 mr-2">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <!-- Facebook Icon SVG -->
+                      </svg>
+                  </a>
+                  <a href="#" class="text-blue-500 hover:text-blue-700 mr-2">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <!-- Discord Icon SVG -->
+                      </svg>
+                  </a>
+                  <a href="#" class="text-blue-500 hover:text-blue-700">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <!-- GitHub Icon SVG -->
+                      </svg>
+                  </a>
+              </div>
+              <p class="text-gray-600 mt-2">Short description about yourself here...</p>
+          </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section class="text-center mt-12">
+        <h2 class="text-3xl font-semibold mb-4">ABOUT US</h2>
+    </section>
+
+    <!-- Containers with Images and Paragraphs -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <!-- Container 1 -->
+        <div class="flex flex-col items-center">
+            <div class="flex items-center mb-4">
+                <img src="https://via.placeholder.com/150" alt="Image 1" class="rounded-lg mr-4">
+                <p class="text-gray-600">Short introduction about yourself...</p>
+            </div>
         </div>
-    </body>
+        <!-- Container 1 -->
+        <div class="flex flex-col items-center">
+          <div class="flex items-center mb-4">
+              <img src="https://via.placeholder.com/150" alt="Image 1" class="rounded-lg mr-4">
+              <p class="text-gray-600">Short introduction about yourself...</p>
+          </div>
+      </div>
+        <!-- Container 3 -->
+        <div class="flex flex-col items-center">
+            <div class="flex items-center mb-4">
+                <img src="https://via.placeholder.com/150" alt="Image 3" class="rounded-lg mr-4">
+                <p class="text-gray-600">Short introduction about yourself...</p>
+            </div>
+        </div>
+    </section>
+
+  </main>
+
+</body>
+
 </html>
