@@ -755,10 +755,13 @@ video {
   margin-bottom: 1rem;
 }
 
+<<<<<<< HEAD
+=======
 .ml-40 {
   margin-left: 10rem;
 }
 
+>>>>>>> 43a3fda407e2c9eb4a3d55216cf3f71068ffcef7
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -2041,6 +2044,8 @@ video {
   padding-left: 1rem;
 }
 
+<<<<<<< HEAD
+=======
 .pl-96 {
   padding-left: 24rem;
 }
@@ -2053,6 +2058,7 @@ video {
   padding-top: 1.5rem;
 }
 
+>>>>>>> 43a3fda407e2c9eb4a3d55216cf3f71068ffcef7
 .text-left {
   text-align: left;
 }
