@@ -653,6 +653,10 @@ video {
   inset-inline-end: 0.25rem;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -725,6 +729,10 @@ video {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.ml-40 {
+  margin-left: 10rem;
 }
 
 .mt-2 {
@@ -844,6 +852,10 @@ video {
 
 .w-\[weird-and-invalid\] {
   width: weird-and-invalid;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-shrink {
@@ -1928,13 +1940,20 @@ video {
   padding-right: 1.25rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
+.pb-8 {
   padding-bottom: 2rem;
 }
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pl-96 {
+  padding-left: 24rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
 }
 
 .pt-6 {
