@@ -4,11 +4,75 @@
         <title> Landing Page </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="src/output.css" rel="stylesheet" >
+
+        
         <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
     </head>
     <body>
-        <div class="bg-yellow-100">
-            Hello World
-        </div>
+        <body style="background-color: #F2D2BD;">
+            <!-- Navigation Section -->
+            <div>
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="toggle-btn">
+                  <div class="hamburger"></div>
+                </label>
+                <nav class="menu">
+                  <ul>
+                    <li>
+                        <img src="image/logo.png">
+                    </li>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#footer">Services</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                  </ul>
+                </nav>
+            </div>
+        
+            <!-- Home Section -->
+            <div id="Home"class="hero flex items-center justify-between" style="padding: 100px; background-color: #C09175;color: white;">
+                <div class="left flex-1 justify-start pl-10" style="margin-left: 20%;">
+                    <img src="./image/pic3.png" alt="Profile" style="width: 450px; height: auto;">
+                </div>                
+                <div class="right flex-1" style="margin-right: 20%;">
+                    <h6 style="font-family: Bravely ;font-size: 50px; font-weight: bold; margin-bottom: 10px;">Creep</h6>
+                    <h1 style="font-size: 36px; margin-bottom: 20px;">What a drag..<br> <span style="font-size: 24px;">-Shikamaru</span></h1>
+                    <div>
+                        <a href="https://www.facebook.com/uButler12/" style="margin-right: 20px;">
+                            <img src="image/facebook.png" alt="Icon 1" width="45px" height="auto" style="display: inline-block;">
+                        </a>
+                        <a href="https://www.instagram.com/creepcxz/">
+                            <img src="image/instagram.png" alt="Icon 2" width="45px" height="auto" style="display: inline-block;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- About Section -->
+            <div id="About"style="display: flex; justify-content: space-between;">
+                <div style="margin: auto; max-width: 500px; padding: 20px; display: flex; align-items: flex-start; margin-left: 20%;">
+                    <div style="background-color: #C09175; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px; ">
+                        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 70px; margin-bottom: 10px; text-align: center;color:#8a2be2;">PHP</h3>
+                        <p style="font-size: 16px; color: black; text-align: center;">PHP is a versatile scripting language primarily used for web development. It offers powerful features for server-side processing, database interaction, and dynamic content generation, making it a popular choice for building dynamic websites and web applications.</p>
+                        <img src="image/php.png" alt="Project 1" style="width: 100%; border-radius: 5px; margin-top: 10px; display: block; margin-left: auto; margin-right: auto;">
+                    </div>
+                </div>
+                <div style="margin: auto; display: flex; align-items: flex-start;">
+                    <div class="left flex-1 justify-start pl-10" style="margin-left: 10%; padding: 20px; margin-top: 20%; ">
+                        <h6 style="font-family: Bravely; font-size: 50px; font-weight: bold; margin-bottom: 20px;">Back End Developer</h6>
+                    </div>
+                    <div class="right flex-1" style="margin-right: 20%;">
+                        <img src="./image/pic3.png" alt="Profile" style="width: 1000px; height: auto; margin-left: 10%;">
+                    </div>
+                </div>
+            </div>
+
+               <!-- Footer Section -->
+    <div id="footer" style="background-color: #C09175; color: white; text-align: center; padding: 20px;">
+        <p style="margin: 0;">&copy; Tailwind Project, 2024 -Creep</p>
+    </div>
+        </body>
+            
+            
     </body>
 </html>
