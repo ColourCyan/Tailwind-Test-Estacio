@@ -1,97 +1,80 @@
 <!DOCTYPE html>
 <html class="home" lang="en">
     <head>
-        <title> Portfolio </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="src/output.css" rel="stylesheet" >
-        <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+        <title>Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link href="src/output.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Halant&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <div class="bg-yellow-600">
-            Hello ph
-        
-        </div>
+
+    <body class="bg-bg-color">
+        <div>
+            <!-- Header -->
+            <header class="bg-bg-header flex justify-between items-center py-2 px-8">
+                <div>
+                    <a href="/index.html">
+                        <img src="/src/icons/logo.png" alt="logo" class="w-44 h-12 md:max-w-full" />
+                    </a>
+                </div>
+                <button class="font-inter text-xs font-bold tracking-widest bg-btn-color hover:bg-hover-color text-white py-1 px-6 float-right">
+                    PROFILE
+                </button>
+            </header>
+            <!-- Header End -->
+
+            <!-- Content -->
+            <div class="container mx-auto px-4">
+              <div class="grid grid-cols-1 md:grid-cols-5 gap-4 py-4">
+                  <!-- Grid Item 1 -->
+                  <div class="h-screen bg-dark-teal opacity-80 rounded-3xl p-4 md:col-span-1 font-hammersmith-one text-rose-white relative flex justify-center items-center">
+                    <div class="flex flex-col items-center justify-center">
+                      <div class="h-44 w-44 bg-potter-clay rounded-full relative flex items-center justify-center">
+                        <img src="/src/icons/pic.jpg" alt="profile" class="h-40 w-40 rounded-full" />
+                      </div>
+
+                      <div class="font-hammersmith-one text-2xl text-rose-white text-center pt-2">Christiane May Comia</div>
+                      <h4 class="text-white">STUDENT INTERN</h4>
+
+                      <div class="font-halant text-sm text-white text-center pt-6">Mobile Number</div>
+                      <h4 class="text-sm">+63 945 8071 241</h4>
+
+                      <div class="font-halant text-sm text-white text-center pt-2">Email Address</div>
+                      <h4 class="text-sm">christianecomia3@gmail.com</h4>
+
+                      <div class="font-halant text-sm text-white text-center pt-2">Address</div>
+                      <h4 class="text-sm text-center">Sampaloc, Manila | Tiaong, Quezon</h4>
+
+                      <div class="mt-4 relative flex items-center justify-center">
+                        <a href="https://bit.ly/3MkhAv0" target="_blank" rel="noopener noreferrer">
+                            <img src="/src/icons/facebook.png" alt="Facebook" class="h-10 w-10 rounded-full" />
+                        </a>
+                        <a href="https://bit.ly/3PrTEsE" target="_blank" rel="noopener noreferrer">
+                            <img src="/src/icons/linkedin.png" alt="LinkedIn" class="h-10 w-10 rounded-full ml-4" />
+                        </a>
+                        <a href="https://bit.ly/3qbpehY" target="_blank" rel="noopener noreferrer">
+                            <img src="/src/icons/instagram.png" alt="Instagram" class="h-10 w-10 rounded-full ml-4" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Grid Item 2 -->
+                  <div class="flex flex-col justify-between col-span-full md:col-span-2">
+                      <div class="h-1/2 bg-potter-clay opacity-80 rounded-3xl p-4 font-hammersmith-one text-rose-white overflow-auto">Skills</div>
+                      <div class="h-1/2 bg-potter-clay opacity-80 rounded-3xl p-4 font-hammersmith-one text-rose-white overflow-auto mt-4">Projects</div>
+                  </div>
+
+                  <!-- Grid Item 3 -->
+                  <div class="flex flex-col justify-between col-span-full md:col-span-2">
+                      <div class="h-2/3 bg-potter-clay opacity-80 rounded-3xl p-4 font-hammersmith-one text-rose-white overflow-auto">Education</div>
+                      <div class="h-1/3 bg-potter-clay opacity-80 rounded-3xl p-4 font-hammersmith-one text-rose-white overflow-auto mt-4">Professional Experience</div>
+                  </div>
               </div>
             </div>
-          </div>
-        </section>
-                     
 
-        <!-- Project Section -->
-        <section id="project" class="text-black body-font mb-20 bg-black">
-          <div class="container px-5 py-24 mx-auto">
-              <h1 class="-mt-5 mb-20 text-3xl dark:text-white title-font text-slate-200 text-center">Explore Our Latest Projects</h1>
-              <div class="flex flex-col items-center">
-                  <img alt="about us" class="w-4/5 h-auto -mt-10 mb-1 object-cover object-center rounded-lg mr-2 inline-block border-2 border-gray-200 bg-gray-100 hover:scale-105" src="src/img/ss.png">
-                  <div class="flex flex-wrap mt-4 mb-1 justify-center"> 
-                  </div>
-              </div>
-          </div>
-      </section>
-        <!--Testimonials-->
-        <section id="testimonials" class= "mb-16 mt-14 pt-16">
-          <div class="container px-5 mx-auto">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20"> TESTIMONIALS </h1>
-            <section class="text-gray-600 body-font">
-              <div class="container px-5 pb-16 mx-auto">
-                <div class="flex flex-wrap -m-4 mb-1">
-                  <div class="lg:w-1/3 lg:mb-0 mb-10 p-4">
-                    <div class="h-full text-center">
-                      <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="src/img/anon.png">
-                      <p class="leading-relaxed font-normal mb-6 text-gray-800">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-                      <span class="inline-block h-1 w-10 rounded bg-black mt-6 mb-4"></span>
-                      <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">CREED CERVANTES</h2>
-                      <p class="text-gray-500">Client 1</p>
-                    </div>
-                  </div>
-                  <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-                    <div class="h-full text-center">
-                      <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="src/img/anon.png">
-                      <p class="leading-relaxed font-normal mb-6 text-gray-800">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." </p>
-                      <span class="inline-block h-1 w-10 rounded bg-black mt-6 mb-4"></span>
-                      <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">LOKI VON AMSTEL</h2>
-                      <p class="text-gray-500">Client 2</p>
-                    </div>
-                  </div>
-                  <div class="lg:w-1/3 lg:mb-0 p-4">
-                    <div class="h-full text-center hover:text-yellow-700">
-                      <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="src/img/anon.png">
-                      <p class="leading-relaxed font-normal mb-6 text-gray-800">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-                      <span class="inline-block h-1 w-10 rounded bg-black mt-6 mb-4"></span>
-                      <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">LUCIUS D'ANGELO</h2>
-                      <p class="text-gray-500">Client 3</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>  
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="text-white body-font mt-1 mb-0 bg-black"> 
-          <div class="container px-5 pt-24 mx-auto">
-              <div class="flex flex-wrap sm:flex-col flex-col py-6 mb-">
-                  <h2 class="sm:w-2/5 -mt-10 mb-5 text-2xl pb-4 font-medium title-font text-slate-200 ">A Glimpse About Us</h2>
-              </div>
-                    <h1 class="sm:w-0/5 leading-relaxed mb-10 text-center text-white font-extralight mt-5 text-xl">As graduating students, we bring fresh perspectives and an desire for success to every project we undertake. Here, you'll have the opportunity to witness the culmination of everyone's hard work and dedication showcased through our various projects.</h1>
-                    <h1 class="sm:w-0/5 leading-relaxed mb-10 text-center text-white font-extralight text-xl"> We recognize that the transition from College to the professional sphere can be challenging. That's why we've come together, leveraging our diverse backgrounds, skills, and experiences to support one another and pave the way for our future careers.
-                        Our team comprises individuals with a different range of talents. Together, we embody a spirit of collaboration and determination, committed to continuously learning, adapting, and thriving in an ever-changing landscape.</h1>
-                    <h1 class="sm:w-0/5 leading-relaxed mb-10 text-center text-white font-extralight text-xl "> As we pursue our dreams and aspirations. We invite you to connect with us, learn more about our journey, and explore how we can collaborate to shape a brighter tomorrow.</h1>
-                  <div class="flex flex-wrap sm:flex-col flex-col py-6 mb-">
-                    <h2 class="sm:w-2/5 text-white font-medium title-font text-3xl mb-2 mt-0 sm:mb-1 text-left  hover:text-yellow-500"></h2>
-                  </div>
-          </div>
-        </section>
-        <!--Footer-->
-        <footer class="text-gray-600 border-t py-4 body-font">
-          <div class="container px-5 py-1 mx-auto flex items-center sm:flex-row flex-col">
-              <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-                  <img src="src/img/star.png" alt="Logo" class="h-8">
-                  <span class="ml-0 text-xl text-gray-950">Portfolio</span>
-              </a>   
-              <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 pl-2">© 2024 Portfolio —
-              <a href="" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Catangui | Erandio | Francisco</a>
-            </p>
-        </footer>
+            </div>
+        </div>
     </body>
 </html>
