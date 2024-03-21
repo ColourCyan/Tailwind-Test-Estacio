@@ -30,7 +30,7 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 py-8 px-8">
                     <!-- Grid Item 1 -->
-                    <div class="h-screen bg-dark-teal opacity-85 rounded-3xl p-4 md:col-span-1 font-hammersmith-one text-rose-white relative flex justify-center items-center">
+                    <div class="h-full bg-dark-teal opacity-85 rounded-3xl p-4 md:col-span-1 font-hammersmith-one text-rose-white relative flex justify-center items-center">
                         <div class="flex flex-col items-center justify-center">
                             <div class="h-44 w-44 bg-potter-clay rounded-full relative flex items-center justify-center">
                                 <img src="/src/icons/pic.jpg" alt="profile" class="h-40 w-40 rounded-full" />
@@ -53,7 +53,7 @@
                                     <img src="/src/icons/facebook.png" alt="Facebook" class="h-12 w-12 md:h-10 md:w-10 rounded-full" />
                                 </a>
                                 <a href="https://bit.ly/3PrTEsE" target="_blank" rel="noopener noreferrer">
-                                    <img src="/src/icons/linkedin.png" alt="LinkedIn" class="h-12 w-12 md:h-10 md:w-10 rounded-full ml-4" />
+                                    <img src="/src/icons/linkedin.png" alt="LinkedIn" class="h-12 w-h-px12 md:h-10 md:w-10 rounded-full ml-4" />
                                 </a>
                                 <a href="https://bit.ly/3qbpehY" target="_blank" rel="noopener noreferrer">
                                     <img src="/src/icons/instagram.png" alt="Instagram" class="h-12 w-12 md:h-10 md:w-10 rounded-full ml-4" />
@@ -66,8 +66,8 @@
                     <div class="flex flex-col justify-between col-span-full md:col-span-2">
                         <div class="h-auto md:h-1/2 bg-potter-clay opacity-90 rounded-3xl p-5 font-hammersmith-one text-rose-white">
                             <div>SKILLS</div>
-                            <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
-                            <div class="mt-2">
+                            <hr class="h-px" />
+                            <div class="mt-2 mx-2">
                                 <span class="text-sm font-halant text-rose-white dark:text-white">HTML & CSS</span>
                                 <div class="w-full bg-bg-color rounded-full h-2.5 dark:bg-gray-700">
                                     <div class="bg-dark-teal opacity-85 h-2.5 rounded-full" style="width: 60%;"></div>
@@ -102,8 +102,8 @@
                         
                         <div class="h-auto md:h-1/2 bg-potter-clay opacity-80 rounded-3xl p-5 font-hammersmith-one text-rose-white mt-4">
                             <div>PROJECTS</div>
-                            <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
-                            <ul class="list-disc mt-2 font-halant px-4">
+                            <hr class="h-px"/>
+                            <ul class="list-disc mt-2 font-halant px-4 justify-center items-center">
                                 <li class="text-lg md:text-base font-semibold tracking-wide">SIKYUrity: Security Agency Management System</li>
                                 <h1 class="text-sm font-bold">Academic Requirement | PUP Manila - CCIS | On-going</h1>
                                 <h1 class="pl-2 text-sm">Frontend: <span class="font-bold">HTML/CSS | Bootsrtap Framework | JavaScript</span></h1>
@@ -136,21 +136,40 @@
                     <div class="flex flex-col justify-between col-span-full md:col-span-2">
                         <div class="h-auto md:h-3/4 bg-potter-clay opacity-90 md:opacity-80 rounded-3xl p-5 font-hammersmith-one text-rose-white">
                             <div>EDUCATION</div>
-                            <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
-                            <ol class="relative border-s border-black mt-4 mx-4">                  
+                            <hr class="h-px"/>
+                            <ol class="relative border-s border-black mt-6 mx-4">                  
                                 <li class="mb-10 ms-6">
                                     <span class="absolute flex items-center justify-center w-4 h-4 bg-rose-white rounded-full -start-3 ring-8 ring-hover-color ml-1"></span>
                                     <h3 class="font-halant text-lg font-semibold tracking-wide">Polytechnic University of the Philippines</h3>
-                                    <h2 class="block mb-2 font-halant text-sm font-normal leading-none">College | Sta. Mesa, Manila</h2>
-                                    <h2 class="block mb-2 font-halant text-sm font-normal leading-none">October 2020 - Present</h2>
-                                    <p class="font-halant text-base font-normal">Bachelor of Science in Information Technology</p>
+                                    <div class="flex items-center">
+                                        <h2 class="block mb-2 mr-2 font-halant text-sm font-bold leading-none">College</h2>
+                                        <h2 class="block mb-2 font-halant text-sm font-normal ml-auto leading-none">October 2020 - Present</h2>
+                                    </div>
+                                    <h2 class="block mb-2 font-halant text-sm font-normal ml-auto leading-none">Bachelor of Science in Information Technology</h2>
+                                </li>
+                                <li class="mb-10 ms-6">
+                                    <span class="absolute flex items-center justify-center w-4 h-4 bg-rose-white rounded-full -start-3 ring-8 ring-hover-color ml-1"></span>
+                                    <h3 class="font-halant text-lg font-semibold tracking-wide">La Consolacion College Manila</h3>
+                                    <div class="flex items-center">
+                                        <h2 class="block mb-2 mr-2 font-halant text-sm font-bold leading-none">Senior High School</h2>
+                                        <h2 class="block mb-2 font-halant text-sm font-normal ml-auto leading-none">July 2018 - March 2020</h2>
+                                    </div>
+                                    <h2 class="block mb-2 font-halant text-sm font-normal ml-auto leading-none">Science, Technology, Engineering and Mathematics (STEM) Strand</h2>
+                                </li>
+                                <li class="mb-10 ms-6">
+                                    <span class="absolute flex items-center justify-center w-4 h-4 bg-rose-white rounded-full -start-3 ring-8 ring-hover-color ml-1"></span>
+                                    <h3 class="font-halant text-lg font-semibold tracking-wide">Victorino Mapa High School</h3>
+                                    <div class="flex items-center">
+                                        <h2 class="block mb-2 mr-2 font-halant text-sm font-bold leading-none">Junior High School</h2>
+                                        <h2 class="block mb-2 font-halant text-sm font-normal ml-auto leading-none">June 2014 - March 2018</h2>
+                                    </div>
                                 </li>
                             </ol>
                         </div>
                         
                         <div class="h-auto md:h-1/4 bg-potter-clay opacity-80 md:opacity-90 rounded-3xl p-5 font-hammersmith-one text-rose-white mt-4">
                             <div>PROFESSIONAL EXPERIENCE</div>
-                            <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
+                            <hr class="h-px" />
                             <ul class="list-disc mt-2 font-halant px-4">
                                 <li class="text-lg md:text-base font-semibold tracking-wide">FIS Global Solutions Philippines</li>
                                 <h1 class="text-sm font-bold">Customer Service Associate II</h1>
