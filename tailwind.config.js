@@ -13,6 +13,7 @@ module.exports = {
         'dark-teal': '#0B4A51',
         'potter-clay': '#8B5032',
         'rose-white': '#FFF6F1',
+        'dawn-pink': '#E8ECEC',
       },
       opacity: {
         '80': '0.8',
