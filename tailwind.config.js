@@ -23,9 +23,6 @@ module.exports = {
         'halant': ['Halant', 'serif'],
         'hammersmith-one': ['Hammersmith One', 'sans-serif'],
       },
-      screens: {
-        'sm': '768px',
-      },
     },
   },
   plugins: [],
