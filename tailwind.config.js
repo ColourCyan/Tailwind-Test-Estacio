@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
@@ -14,9 +17,6 @@ module.exports = {
         'potter-clay': '#8B5032',
         'rose-white': '#FFF6F1',
         'dawn-pink': '#E8ECEC',
-      },
-      opacity: {
-        '80': '0.8',
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],

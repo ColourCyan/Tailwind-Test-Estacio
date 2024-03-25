@@ -15,14 +15,26 @@
             <header class="bg-bg-header flex justify-between items-center py-2 px-8">
                 <div>
                     <a href="/index.html">
-                        <img src="/src/icons/logo.png" alt="logo" class="w-44 h-12 md:max-w-full ml-5" />
+                        <!-- Logo for smaller screens -->
+                        <img src="/src/icons/logo.png" alt="logo" class="w-32 h-10 md:hidden ml-2" />
+                        <!-- Logo for larger screens -->
+                        <img src="/src/icons/logo.png" alt="logo" class="w-44 h-12 md:max-w-full md:block hidden ml-5" />
                     </a>
                 </div>
+                <!-- Button 1 -->
                 <a href="/src/icons/resume.pdf" download="COMIA, Christiane May - Resume">
-                    <button class="font-inter text-xs tracking-widest rounded-md bg-btn-color hover:bg-hover-color text-white py-2 px-6 mr-5 float-right">
+                    <button class="hidden md:block font-inter text-xs tracking-widest rounded-md bg-btn-color hover:bg-hover-color text-white py-2 px-6 mr-5 float-right">
                         DOWNLOAD CV
                     </button>
                 </a>
+
+                <div class="md:hidden">
+                    <a href="/src/icons/resume.pdf" download="COMIA, Christiane May - Resume">
+                        <div class="flex items-center justify-center w-10 h-10 bg-potter-clay rounded-full">
+                            <img src="/src/icons/download.png" alt="download icon" class="w-6 h-6" />
+                        </div>
+                    </a>
+                </div>
             </header>
             <!-- Header End -->
 
@@ -30,46 +42,44 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 py-8 px-8">
                     <!-- Grid Item 1 -->
-                    <div class="h-full bg-dark-teal opacity-85 rounded-3xl p-4 md:col-span-1 font-hammersmith-one text-rose-white relative flex justify-center items-center">
-                        <div class="flex flex-col items-center justify-center">
-                            <div class="h-44 w-44 bg-potter-clay rounded-full relative flex items-center justify-center">
-                                <img src="/src/icons/pic.jpg" alt="profile" class="h-40 w-40 rounded-full" />
+                    <div class="flex flex-row items-center justify-center md:col-span-1">
+                        <div class="h-auto md:h-full w-full bg-dark-teal opacity-85 rounded-3xl p-8 md:p-8 font-hammersmith-one text-rose-white relative justify-center items-center flex flex-col">
+                            <!-- Profile Picture -->
+                            <div class="flex items-center justify-center w-full">
+                                <div class="flex items-center justify-center border-8 border-potter-clay rounded-full">
+                                    <div class="flex items-center justify-center h-40 w-40 rounded-full bg-white opacity-95"> 
+                                        <img src="/src/icons/pic.jpg" alt="profile" class="h-full w-full rounded-full" />
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="font-hammersmith-one text-3xl md:text-xl text-rose-white text-center pt-4">Christiane May Comia
-                                <div class="text-white text-sm">STUDENT INTERN</div>
+                        
+                            <div class="text-center">
+                                <div class="font-hammersmith-one text-3xl md:text-xl text-rose-white pt-4">Christiane May Comia</div>
+                                <div class="text-white text-sm mt-1">STUDENT INTERN</div>
+                                <div class="font-halant text-sm md:text-xs text-white pt-8">Mobile Number:</div>
+                                <div class="font-hammersmith-one text-lg md:text-xs text-white">+63 945 8071 241</div>
+                                <div class="font-halant text-sm md:text-xs text-white pt-2">Address:</div>
+                                <div class="font-hammersmith-one text-lg md:text-xs text-white">Sampaloc, Manila | Tiaong, Quezon</div>
                             </div>
-                            
-
-                            <div class="font-halant text-sm md:text-xs text-white text-center pt-8">Mobile Number
-                                <div class="text-lg md:text-xs font-hammersmith-one">+63 945 8071 241</div>
-                            </div>
-                            
-                            <div class="font-halant text-sm md:text-xs text-white text-center pt-2">Email Address
-                                <div class="text-lg md:text-xs font-hammersmith-one">christianecomia3@gmail.com</div>
-                            </div>
-
-                            <div class="font-halant text-sm md:text-xs text-white text-center pt-2">Address
-                                <div class="text-lg md:text-xs font-hammersmith-one">Sampaloc, Manila | Tiaong, Quezon</div>
-                            </div>
-                            
-                            <div class="mt-6 relative flex items-center justify-center">
+                    
+                            <div class="mt-10 gap-4 relative flex items-center justify-center">
                                 <a href="https://bit.ly/3MkhAv0" target="_blank" rel="noopener noreferrer">
                                     <img src="/src/icons/facebook.png" alt="Facebook" class="h-12 w-12 md:h-10 md:w-10 rounded-full" />
                                 </a>
                                 <a href="https://bit.ly/3PrTEsE" target="_blank" rel="noopener noreferrer">
-                                    <img src="/src/icons/linkedin.png" alt="LinkedIn" class="h-12 w-h-px12 md:h-10 md:w-10 rounded-full ml-4" />
+                                    <img src="/src/icons/linkedin.png" alt="LinkedIn" class="h-12 w-h-px12 md:h-10 md:w-10 rounded-full" />
                                 </a>
-                                <a href="https://bit.ly/3qbpehY" target="_blank" rel="noopener noreferrer">
-                                    <img src="/src/icons/instagram.png" alt="Instagram" class="h-12 w-12 md:h-10 md:w-10 rounded-full ml-4" />
+                                <a href="mailto:comiachristianem@gmail.com" class="hover:underline">
+                                    <img src="/src/icons/gmail.jpg" alt="Gmail" class="h-12 w-12 md:h-10 md:w-10 rounded-full" />
                                 </a>
                             </div>
                         </div>
                     </div>
+                            
 
                     <!-- Grid Item 2 -->
                     <div class="flex flex-col justify-between col-span-full md:col-span-2">
-                        <div class="h-auto md:h-1/2 bg-potter-clay opacity-90 rounded-3xl p-5 font-hammersmith-one text-rose-white">
+                        <div class="h-auto md:h-1/2 w-auto bg-potter-clay opacity-90 rounded-3xl p-5 font-hammersmith-one text-rose-white">
                             <div>SKILLS</div>
                             <hr class="h-px" />
                             <div class="mt-2 mx-2">
@@ -111,7 +121,7 @@
                             <ul class="list-disc mt-2 font-halant px-4 justify-center items-center">
                                 <li class="text-lg md:text-base font-semibold tracking-wide">SIKYUrity: Security Agency Management System</li>
                                 <h1 class="text-sm font-bold">Academic Requirement | PUP Manila - CCIS | On-going</h1>
-                                <h1 class="pl-2 text-sm">Frontend: <span class="font-bold">HTML/CSS | Bootsrtap Framework | JavaScript</span></h1>
+                                <h1 class="pl-2 text-sm">Frontend: <span class="font-bold">HTML/CSS | Bootstrap Framework | JavaScript</span></h1>
                                 <h1 class="pl-2 text-sm">Backend: <span class="font-bold">Python - Django Framework</span></h1>
                                 <h1 class="pl-2 text-sm">Database: <span class="font-bold">MySQL</span></h1>
                                 <h1 class="pl-2 text-sm">Co-Developers: 
@@ -139,7 +149,7 @@
 
                     <!-- Grid Item 3 -->
                     <div class="flex flex-col justify-between col-span-full md:col-span-2">
-                        <div class="h-auto md:h-3/4 bg-potter-clay opacity-90 md:opacity-80 rounded-3xl p-5 font-hammersmith-one text-rose-white">
+                        <div class="h-auto w-auto md:h-3/4 bg-potter-clay opacity-90 md:opacity-80 rounded-3xl p-5 font-hammersmith-one text-rose-white">
                             <div>EDUCATION</div>
                             <hr class="h-px"/>
                             <ol class="relative border-s border-black mt-6 mx-4">                  
