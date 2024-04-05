@@ -823,6 +823,18 @@ video {
   margin-top: 1.5rem;
 }
 
+.ml-12 {
+  margin-left: 3rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2251,9 +2263,9 @@ video {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
 }
 
 .text-lg {
@@ -2821,6 +2833,10 @@ video {
     margin-bottom: 0.25rem;
   }
 
+  .sm\:ml-12 {
+    margin-left: 3rem;
+  }
+
   .sm\:ml-4 {
     margin-left: 1rem;
   }
@@ -2859,14 +2875,17 @@ video {
     padding-left: 1rem;
   }
 
+  .sm\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .sm\:text-center {
+    text-align: center;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   .sm\:underline {
@@ -2875,8 +2894,24 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:ml-10 {
+    margin-left: 2.5rem;
+  }
+
+  .md\:ml-12 {
+    margin-left: 3rem;
   }
 
   .md\:ml-4 {
@@ -2895,8 +2930,8 @@ video {
     display: none;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -2911,9 +2946,30 @@ video {
     align-items: center;
   }
 
-  .md\:text-6xl {
-    font-size: 3.75rem;
+  .md\:pt-14 {
+    padding-top: 3.5rem;
+  }
+
+  .md\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-justify {
+    text-align: justify;
+  }
+
+  .md\:text-8xl {
+    font-size: 6rem;
     line-height: 1;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2926,20 +2982,26 @@ video {
     width: 33.333333%;
   }
 
-  .lg\:pt-28 {
-    padding-top: 7rem;
+  .lg\:pt-0 {
+    padding-top: 0px;
   }
 
-  .lg\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
+  .lg\:pt-32 {
+    padding-top: 8rem;
   }
-}
 
-@media (min-width: 1280px) {
-  .xl\:text-9xl {
+  .lg\:text-left {
+    text-align: left;
+  }
+
+  .lg\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
