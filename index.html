@@ -6,38 +6,212 @@
         <link href="src/output.css" rel="stylesheet" >
         <!-- Don't forget to run: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
     </head>
-    <bod>
+    <body>
+
       <!--This is the navigation bar-->
-      <header class="sticky top-0 flex-auto pt-1">
+      <header class="sticky top-0 flex-auto pt-1 shadow-md">
         <a href="#home"><h1 class="flex-auto inline-block float-left pt-4 pb-4 pl-8 text-4xl font-bold text-gray-900 hover:scale-125">ABC
           <img class="flex-auto inline-block object-scale-down w-12 h-12 pb-2 pl-1" src="src/img/abc.png" alt="ABC"></h1>
         </a>
-        <nav class="flex-auto p-6 font-medium text-center text-gray-900 bg-gray-200 rounded sm:text-center md:text-end">
-          <a href="#home" class="p-2 rounded-md hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50">Home</a>
-          <a href="#about" class="p-2 rounded-md hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50">About</a>
-          <a href="#contact" class="p-2 rounded-md hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50">Contact</a>
+        <nav class="flex-auto p-6 font-medium text-center text-gray-900 bg-gray-200 rounded sm:text-end md:text-end sm:p-4">
+          <a href="#home" class="p-2 rounded-md hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50" onclick="closeForm();closeForm1();closemain()">Home</a>
+          <a href="#about" class="p-2 rounded-md hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50"onclick="closeForm();closeForm1();closemain()">About</a>
+          <a href="#contact" class="p-2 rounded-md hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50"onclick="closeForm();closeForm1();closemain()">Contact</a>
+          <button class="p-1 pl-3 pr-3 text-gray-900 bg-blue-500 rounded-full hover:text-white hover:bg-blue-600" onclick="openForm();closeForm1();main()">Sign In</button>
+          <button class="p-1 pl-3 pr-3 text-gray-900 bg-blue-500 rounded-full hover:text-white hover:bg-blue-600" onclick="openForm1(); closeForm();main()">Sign Up</button>
         </nav>
       </header>
+
+        <!--Sing In and Sign up pop up forms-->
+        <!--Sign up-->
+        <div class="w-full max-w-sm mt-2 ml-3 border-none">
+          <form id="signup" class="hidden px-8 pt-6 pb-8 mb-4 bg-gray-100 rounded shadow-md">
+            <fieldset class="text-left">
+              <legend class="block mb-2 font-semibold text-gray-900 text-md">Sign Up</legend>
+  
+              <div class="mb-4">
+              <label for="firstname" class="block mb-2 text-sm font-semibold text-gray-900">First name:</label>
+              <input type="text" placeholder="Enter Firstname:" name="firstname" required class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+              </div>
+  
+              <div class="mb-4">
+              <label for="lasstname" class="block mb-2 text-sm font-semibold text-gray-900">Last name:</label>
+              <input type="text" placeholder="Enter Lastname:" name="lasstname" required class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+              </div>
+  
+              <div class="mb-4">
+              <label for="username" class="block mb-2 text-sm font-semibold text-gray-900">User name:</label>
+              <input type="text" placeholder="Enter Username:" name="username" required class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+              </div>
+  
+              <div class="mb-4">
+              <label for="email" class="block mb-2 text-sm font-semibold text-gray-900">Email:</label>
+              <input type="text" placeholder="Enter Email" name="email" required class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+              </div>
+  
+              <div class="mb-4">
+              <label for="psw" class="block mb-2 text-sm font-semibold text-gray-900">Password</label>
+              <input type="password" placeholder="Enter Password" name="psw" required class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+              </div>
+  
+              <div class="flex-auto">
+              <button class="p-1 pl-3 pr-3 font-semibold text-gray-900 bg-blue-500 rounded-full hover:text-white hover:bg-blue-600">Sign up</button>
+              <button type="button" onclick="closeForm1();closemain()" class="p-1 pl-3 pr-3 font-semibold text-gray-900 bg-blue-500 rounded-full hover:text-white hover:bg-blue-600">Cancel</button>
+              </div>
+  
+            </fieldset>
+          </form>
+          <script>
+            function openForm1() {
+              document.getElementById("signup").style.display = "block";
+            }
+            
+            function closeForm1() {
+              document.getElementById("signup").style.display = "none";
+            }
+            </script>
+          </div>
+  
+          <!--Sign in-->
+          <div class="w-full max-w-sm mt-2 ml-3 border-none rounded">
+            <form id="signin" class="hidden px-8 pt-6 pb-8 mb-4 bg-gray-100 rounded shadow-md">
+              <fieldset class="text-left">
+                <legend class="block mb-2 font-semibold text-gray-900 text-md">Sign In</legend>
+  
+                <div class="mb-4">
+                  <label for="username" class="block mb-2 text-sm font-semibold text-gray-900">User name:</label>
+                  <input type="text" placeholder="Enter Username:" name="username" required class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+                </div>
+  
+                <div class="mb-4">
+                  <label for="psw" class="block mb-2 text-sm font-semibold text-gray-900">Password</label>
+                  <input type="password" placeholder="Enter Password" name="psw" required class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+                </div>
+  
+                <div class="flex-auto">
+                  <button class="p-1 pl-3 pr-3 font-semibold text-gray-900 bg-blue-500 rounded-full hover:text-white hover:bg-blue-600">Sign in</button>
+                  <button type="button" onclick="closeForm();closemain()" class="p-1 pl-3 pr-3 font-semibold text-gray-900 bg-blue-500 rounded-full hover:text-white hover:bg-blue-600">Cancel</button>
+                  <label for="remember" class="text-sm font-semibold text-gray-900">Remeber me:</label>
+                  <input type="checkbox" name="remember" checked class="mt-1">
+                </div>
+  
+              </fieldset>
+            </form>
+            <script>
+              function openForm() {
+                document.getElementById("signin").style.display = "block";
+              }
+              
+              function closeForm() {
+                document.getElementById("signin").style.display = "none";
+              }
+              </script>
+         </div>   
+      
       <!--Contents of the Body Home, About, Contact-->
-      <main>
+      <main id="main">
+        <!--Home-->
         <div id="home" class="flex-auto py-3">
             <div>
-              <h2 class="flex-auto p-2 mx-2 font-bold bg-gray-100 rounded text-1xl">Home</h2>
+              <h2 class="flex-auto p-2 mx-2 ml-3 font-bold bg-gray-100 rounded text-1xl">Home</h2>
             </div>
-           <!--<div>
-              <img src="src/img/abc.png" alt="ABC" class="flex-auto float-end lg:scale-150 mt-44 mr-28 hover:opacity-75 md:scale-90 sm:scale-50">
-            </div>-->
-            <div class="flex-auto pl-16 font-semibold text-blue-300 break-all pt-44 lg:text-5xl md:text-4xl sm:text-3xl bg-gray-50 pb-80">
+
+            <div class="flex-auto pl-16 font-semibold text-blue-300 break-before-all pt-44 lg:text-5xl md:text-4xl sm:text-3xl bg-gray-50 pb-80">
               <p class="m-3">This website is for training purposes</p>
               <p class="m-3">only in using Tailwind CSS, to design</p>
               <p class="m-3">a website for future projects at</p>
               <p class="m-3">UIP Inc. as an intern</p>
             </div>
          </div>
-         <div class="flex-auto py-3">
 
+         <!--About-->
+         <div id="about"class="flex-auto py-3">
+            <div>
+              <h2 class="flex-auto p-2 mx-2 ml-3 font-bold bg-gray-100 rounded text-1xl">About</h2>
+            </div>
+            <div class="flex-auto pt-48 pr-12 font-semibold text-blue-300 break-before-all lg:text-4xl md:text-3xl sm:text-3xl bg-gray-50 pb-80 text-end">
+              <p class="m-3">ABC is a fictional company that does not</p>
+              <p class="m-3">exist this website is only made to showcase</p>
+              <p class="m-3">the skills that we earned during the training</p>
+              <p class="m-3">process on using the framework Tailwind CSS to</p>
+              <p class="m-3">manipulate and design the website's contents.</p>
+            </div>
          </div>
+
+         <!--Contact-->
+         <div id="contact" class="flex-auto py-3 pb-40 bg-gray-50">
+          <div>
+            <h2 class="flex-auto p-2 mx-2 ml-3 font-bold bg-gray-100 rounded text-1xl">Contact</h2>
+          </div>
+
+          <!--Facebook-->
+          <div class="inline-flex px-10 rounded mt-28 ml-44 hover:scale-105 sm:scale-75 md:scale-90">
+           <div class="max-w-md overflow-hidden bg-gray-200 rounded shadow-lg">
+            <img class="flex-auto object-scale-down mt-3 ml-8 rounded-md shadow-lg mr-7 h-50 w-50" src="/src/img/abc.png" alt="ABC">
+            <div class="px-6">
+              <div class="text-xl font-bold text-center">Contact us</div>
+              <p class="mb-5 text-base font-semibold text-center text-gray-900">
+                @Facebook.com
+              </p>
+            </div>
+            <div class="px-6 pb-5 mt-2 text-center">
+              <span class="inline-block px-8 py-1 mb-2 mr-1 text-lg font-semibold text-gray-900 bg-blue-500 rounded-full hover:bg-blue-600 hover:text-white">
+              <a href="https://www.facebook.com/" target="_blank"><img src="src/icons/facebook.png" alt="facebook" class="inline-block object-scale-down w-10 h-10 mr-2">Facebook</a></span>
+             </div>
+            </div>
+           </div>
+
+           <!--Email-->
+           <div class="inline-flex px-10 mt-5 ml-8 rounded hover:scale-105 sm:scale-75 md:scale-90">
+            <div class="max-w-md overflow-hidden bg-gray-200 rounded shadow-lg">
+             <img class="flex-auto object-scale-down mt-3 ml-8 rounded-md shadow-lg mr-7 h-50 w-50" src="/src/img/abc.png" alt="ABC">
+             <div class="px-6">
+               <div class="text-xl font-bold text-center">Contact us</div>
+               <p class="mb-5 text-base font-semibold text-center text-gray-900">
+                 @Email abc@gmail.com
+               </p>
+             </div>
+             <div class="px-6 pb-5 mt-2 text-center">
+               <span class="inline-block px-12 py-1 mb-2 mr-2 text-lg font-semibold text-gray-900 bg-blue-500 rounded-full hover:bg-blue-600 hover:text-white">
+               <a href="https://gmail.com" target="_blank"><img src="src/icons/Email_icon.png" alt="facebook" class="inline-block object-scale-down w-10 h-10 mr-3">Email</a></span>
+              </div>
+             </div>
+            </div>
+
+            <!--Phone number-->
+           <div class="inline-flex px-10 mt-5 ml-8 rounded hover:scale-105 sm:scale-75 md:scale-90">
+            <div class="max-w-md overflow-hidden bg-gray-200 rounded shadow-lg">
+             <img class="flex-auto object-scale-down mt-3 ml-8 rounded-md shadow-lg mr-7 h-50 w-50" src="/src/img/abc.png" alt="ABC">
+             <div class="px-6">
+               <div class="text-xl font-bold text-center">Contact us</div>
+               <p class="mb-5 text-base font-semibold text-center text-gray-900">
+                 Call or Message us 
+               </p>
+             </div>
+             <div class="px-6 pb-5 mt-2 text-center">
+               <span class="inline-block px-6 py-1 mb-2 mr-2 text-lg font-semibold text-gray-900 bg-blue-500 rounded-full hover:bg-blue-600 hover:text-white">
+               <img src="src/icons/phone.png" alt="facebook" class="inline-block object-scale-down w-10 h-10 mr-3 rounded-full">+63-#########</a></span>
+              </div>
+             </div>
+            </div>
+            
+       </div>
+
+       <script>
+        function main() {
+          document.getElementById("main").style.display = "none";
+        }
+        
+        function closemain() {
+          document.getElementById("main").style.display = "block";
+        }
+        </script>
+
       </main>
+      <footer class="p-2 m-3 text-center text-gray-500 shadow-md rounded-xl bg-slate-100">
+        <p>Author: Mojica, Jonas Orville C.<br>
+           for training purposes only @UIP Inc.</p>
+      </footer>
       
     </body>
 </html>
